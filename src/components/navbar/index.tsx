@@ -54,7 +54,7 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      <nav className="absolute min-h-[134px] mob:min-h-max z-50  w-full px-5">
+      <nav className=" mob:min-h-max z-50  w-full px-5">
         <div className="flex justify-center items-center w-full min-h-[134px] mob:min-h-max">
           <div className=" max-w-[1313.5px] mob:min-h-max w-full flex flex-wrap items-center justify-between mx-auto py-4">
             <div className="flex justify-between w-full pb-4 items-center">
