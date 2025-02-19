@@ -1,12 +1,11 @@
 import { useEffect } from "react";
 import { twMerge } from "tailwind-merge";
-import Image from "next/image";
+import { RxCross1 } from "react-icons/rx";
+
+import { cn } from "@/lib/utils";
 
 import Text from "./Text";
 import Button from "./Button";
-import { cn } from "@/lib/utils";
-
-import crossSvg from "@/public/images/new-dashboard/Close.svg";
 
 type DrawerProps = {
   isOpen: boolean;
@@ -41,12 +40,6 @@ const Drawer: React.FC<DrawerProps> = ({
     };
   }, [isOpen]);
 
-  const handleEscapeKeyPress = (event: KeyboardEvent) => {
-    if (event.key === "Escape") {
-      onClose();
-    }
-  };
-
   const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (event.target === event.currentTarget) {
       onClose();
@@ -65,27 +58,27 @@ const Drawer: React.FC<DrawerProps> = ({
       {/* Desktop Drawer */}
       <div
         className={twMerge(
-          `no-scrollbar fixed right-0 top-0 z-[999] hidden h-full w-[710px] transform overflow-scroll bg-[#F2F2F2] transition-transform duration-500 ease-in-out md:block ${
+          `no-scrollbar fixed right-0 top-0 z-[999] hidden h-full w-[710px] mob:w-full transform overflow-scroll bg-secondary transition-transform duration-500 ease-in-out xl:block ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`,
-          className,
+          className
         )}
       >
         {/* Drawer Close Button */}
         <Button
-          variant="gray"
-          className="absolute mt-10 flex justify-start border-none py-0"
+          variant="primary"
+          className="absolute mt-10 flex justify-start border-none py-0 bg-transparent right-0"
           onClick={onClose}
         >
-          <Image src={crossSvg} alt="closeIcon" />
+          <RxCross1 className="text-white font-bold text-[30px] " />
         </Button>
         {/* </div> */}
 
         {/* Drawer content */}
         <div
           className={cn(
-            "mx-auto flex h-full max-w-[450px] flex-col items-center justify-center pt-[30px] mob:h-auto",
-            mt,
+            "mx-auto flex h-full max-w-[450px] flex-col items-center justify-center pt-[30px] mob:h-[93%]",
+            mt
           )}
         >
           <div className="w-full pb-4 text-left mob:px-[25px]">

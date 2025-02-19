@@ -18,7 +18,10 @@ const config: Config = {
       },
 
       screens: {
-        lg: { max: "1024px" },
+        "2xl": { max: "1535px" },
+        xl: { max: "1279px" },
+        lg: { max: "1023px" },
+        navsize: { max: "1180px" },
         tab: { max: "991px" },
         mob: { max: "768px" },
       },
