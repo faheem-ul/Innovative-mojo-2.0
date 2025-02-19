@@ -11,3 +11,31 @@
 body {
   background: var(--background);
 }
+
+.mojoeffect-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(92, 58, 0, 0.3) 0%,
+    rgba(92, 58, 0, 0.3) 6.25%,
+    rgba(93, 59, 1, 0.3) 12.5%,
+    rgba(96, 62, 3, 0.3) 18.75%,
+    rgba(102, 67, 7, 0.3) 25%,
+    rgba(111, 76, 14, 0.3) 31.25%,
+    rgba(124, 90, 23, 0.3) 37.5%,
+    rgba(143, 108, 37, 0.3) 43.75%,
+    rgba(169, 133, 56, 0.3) 50%,
+    rgba(194, 158, 74, 0.3) 56.25%,
+    rgba(213, 176, 88, 0.3) 62.5%,
+    rgba(226, 190, 97, 0.3) 68.75%,
+    rgba(235, 199, 104, 0.3) 75%,
+    rgba(241, 204, 108, 0.3) 81.25%,
+    rgba(244, 207, 110, 0.3) 87.5%,
+    rgba(245, 208, 111, 0.3) 93.75%,
+    rgba(245, 208, 111, 0.3) 100%
+  );
+}
+
+.input-gradient {
+  border: 1px solid
+    var(--SecundaryBrandColor-SecundaryBrandColor, rgba(245, 208, 111, 1));
+}

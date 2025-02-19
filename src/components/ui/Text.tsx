@@ -8,7 +8,9 @@ interface Props {
   children: React.ReactNode;
   className?: string;
   as?: ComponentAs;
-  onClick?: any;
+  onClick?: (
+    event: React.MouseEvent<HTMLHeadingElement | HTMLParagraphElement>
+  ) => void;
 }
 
 const Text = forwardRef<HTMLHeadingElement | HTMLParagraphElement, Props>(

@@ -1,26 +1,25 @@
-import Text from "@/components/ui/Text";
-
-import Button from "@/components/ui/Button";
-
-import LinkButton from "@/components/ui/LinkButton";
+import HomeHero from "@/components/home/hero/indx";
+import HomeExpertise from "@/components/home/our-expertise";
+import HomeProudly from "@/components/home/proudly-worked";
+import HomeVideos from "@/components/home/vidoes";
+import MojoEffect from "@/components/home/mojo-effect";
+import HomeGetinTouch from "@/components/home/get-in-touch";
 
 export default function Home() {
   return (
-    <div className="">
-      <Text as="h1" className="text-gold">
-        Hello world
-      </Text>
-      <Text as="h2" className="text-gold">
-        Hello world
-      </Text>
-      <Text as="h3" className="text-gold">
-        Hello world
-      </Text>
-      <Text className="text-primary">Hello world</Text>
-      <Button className="w-[207px] h-[62px]"> Let´s work together</Button>
-      <LinkButton className="w-[207px] h-[62px] mt-2" href="/example.com">
-        Visit our website
-      </LinkButton>
-    </div>
+    <>
+      <HomeHero />
+      <HomeExpertise />
+      <HomeProudly />
+      <HomeVideos />
+      <MojoEffect />
+      <HomeGetinTouch />
+      {/* <HomeServices />
+      <HomeFeatured />
+      <HomeAbout />
+      <HomeCaseStudies />
+      <HomeTestimonials />
+      <HomeContact /> */}
+    </>
   );
 }
