@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-// import { usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { gsap } from "gsap";
@@ -14,8 +14,8 @@ import line from "@/public/icons/Line.svg";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  //   const currentPathname = usePathname();
-  // console.log(currentPathname);
+  const currentPathname = usePathname();
+  console.log(currentPathname);
 
   //   const [ServicesToggle, setServicesToggle] = useState(false);
   //   const [BooknowToggle, setBooknowToggle] = useState(false);
@@ -106,18 +106,29 @@ const Navbar = () => {
                     {/* Your menu options */}
                     <ul className="font-normal mob:absolute mob:top-[100px] items-center mob:px-4 mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[5px] md:flex-row  rtl:space-x-reverse md:mt-0  tab:bg-black">
                       <li className="flex">
-                        <Link
+                        <a
                           href="/"
-                          className="block  text-[18px] font-poppins font-normal leading-[25.5px] text-primary"
+                          className={cn(
+                            "block  text-[18px] font-poppins font-normal leading-[25.5px]",
+
+                            currentPathname === "/"
+                              ? "text-[#BA7802]"
+                              : "text-primary"
+                          )}
                         >
                           Home
-                        </Link>
+                        </a>
                         <Image src={line} alt="line" />
                       </li>
                       <li className="relative group flex">
                         <Link
-                          href="/services"
-                          className="block text-[18px] font-poppins font-normal leading-[25.5px] text-primary"
+                          href="/projects"
+                          className={cn(
+                            "block text-[18px] font-poppins font-normal leading-[25.5px] text-primary",
+                            currentPathname === "/projects"
+                              ? "text-[#BA7802]"
+                              : "text-primary"
+                          )}
                         >
                           Projects
                         </Link>
@@ -212,8 +223,13 @@ const Navbar = () => {
 
                       <li className="flex">
                         <Link
-                          href="/"
-                          className="block  text-[18px] font-poppins font-normal leading-[25.5px] text-primary"
+                          href="/about-us"
+                          className={cn(
+                            "block  text-[18px] font-poppins font-normal leading-[25.5px] text-primary",
+                            currentPathname === "/about-us"
+                              ? "text-[#BA7802]"
+                              : "text-primary"
+                          )}
                         >
                           About
                         </Link>
@@ -293,14 +309,20 @@ const Navbar = () => {
                     <div className="flex flex-col justify-center items-center h-full w-full ">
                       <Image src={logo} alt="logo" className="w-[150px]" />
                       <ul className="font-normal  w-full  mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[0px]  rtl:space-x-reverse md:mt-0 ">
-                        <Link
+                        <a
                           href="/"
-                          className="block  text-[18px] font-poppins font-medium leading-[25.5px] text-primary  "
+                          className={cn(
+                            "block text-[18px] font-poppins font-medium leading-[25.5px] text-primary",
+
+                            currentPathname === "/"
+                              ? "text-[#BA7802]"
+                              : "text-primary"
+                          )}
                         >
                           <li className="flex justify-center py-[15px] list-items">
                             Home
                           </li>
-                        </Link>
+                        </a>
                         <hr className="h-px  bg-[#C0C0C0] border-0"></hr>
 
                         <li
@@ -310,13 +332,18 @@ const Navbar = () => {
                           )}
                           //   onClick={handleServicesToggle}
                         >
-                          <Link
-                            href="/"
-                            className="text-[18px] pl-5 font-medium text-white text-center"
+                          <a
+                            href="/projects"
+                            className={cn(
+                              "text-[18px] pl-5 font-medium text-white text-center",
+                              currentPathname === "/projects"
+                                ? "text-[#BA7802]"
+                                : "text-primary"
+                            )}
                             // onClick={(e) => e.stopPropagation()}
                           >
                             Projects
-                          </Link>
+                          </a>
                           {/* <FaChevronDown
                             className={`text-white transform transition-transform duration-300 text-[18px] ${
                               ServicesToggle ? "rotate-180" : "rotate-0"
@@ -381,8 +408,13 @@ const Navbar = () => {
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <a
-                          href="/about"
-                          className="block  text-[18px] font-poppins font-medium leading-[25.5px] text-primary  "
+                          href="/about-us"
+                          className={cn(
+                            "block text-[18px] font-poppins font-medium leading-[25.5px]",
+                            currentPathname === "/about-us"
+                              ? "text-[#BA7802]"
+                              : "text-primary"
+                          )}
                         >
                           <li className="flex justify-center py-[15px] list-items">
                             About

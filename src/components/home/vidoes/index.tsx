@@ -9,7 +9,7 @@ import videoimage5 from "@/public/images/home/videoimage5.png";
 
 const HomeVideos = () => {
   return (
-    <div className="w-full h-full mt-[122px] xl:px-5 mb-[127px]">
+    <div className="w-full h-full mt-[122px] xl:px-5 mb-[127px] mob:mb-[66px]">
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full max-w-[1313px]">
           <div className="w-full flex justify-between 2xl:justify-center gap-[28px] flex-wrap">
@@ -18,12 +18,12 @@ const HomeVideos = () => {
               <Image
                 src={videoimage2}
                 alt=""
-                className="w-full max-w-[315px]"
+                className="w-full max-w-[315px] mob:max-w-[187px]"
               />
               <Image
                 src={videoimage3}
                 alt=""
-                className="w-full max-w-[315px]"
+                className="w-full max-w-[315px] mob:max-w-[187px]"
               />
             </div>
           </div>
@@ -32,12 +32,12 @@ const HomeVideos = () => {
             <Image
               src={videoimage4}
               alt=""
-              className="w-full max-w-[630px] 2xl:h-[400px]"
+              className="w-full max-w-[630px] 2xl:h-[400px] mob:h-full mob:max-w-full"
             />
             <Image
               src={videoimage5}
               alt=""
-              className="w-full max-w-[645px] 2xl:h-[400px]"
+              className="w-full max-w-[645px] 2xl:h-[400px] mob:h-full mob:max-w-full"
             />
           </div>
         </div>

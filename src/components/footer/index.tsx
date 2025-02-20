@@ -18,14 +18,13 @@ const Footer = () => {
           src={footerBg}
           alt="Footer Background"
           layout="fill"
-          objectFit="cover"
           quality={100}
           className="opacity-70"
         />
       </div>
 
       {/* Footer Content */}
-      <div className="relative w-full max-w-[1313px] flex xl:flex-column xl:justify-center xl:items-center xl:gap-10 justify-between items-center z-10">
+      <div className="relative px-5 w-full max-w-[1313px] mob:mt-[250px] mob:mb-[100px] flex mob:flex-col xl:flex-column xl:justify-center xl:items-center xl:gap-10 justify-between items-center z-10">
         {/* Left Section */}
         <div className="max-w-[600px] text-center md:text-left">
           <Image
@@ -44,9 +43,9 @@ const Footer = () => {
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-col md:flex-row md:gap-20 mt-10 md:mt-0 text-center mob:flex-col md:text-left">
+        <div className="flex flex-col md:flex-row md:gap-20 mt-10 md:mt-0 text-center mob:flex-col md:text-left mob:items-start mob:w-full mob:gap-[18px]">
           {/* Links */}
-          <ul className="space-y-[18px]">
+          <ul className="space-y-[18px] mob:text-left">
             <li>
               <Link href="#" className="text-[20px] font-poppins">
                 Home
@@ -70,7 +69,7 @@ const Footer = () => {
           </ul>
           <div>
             {/* Contact Info */}
-            <ul className="space-y-[18px]">
+            <ul className="space-y-[18px] mob:text-left">
               <li>
                 <Link
                   href="mailto:sales@innovativemojo.com"

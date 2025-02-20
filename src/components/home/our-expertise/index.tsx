@@ -21,7 +21,7 @@ const HomeExpertise = () => {
   return (
     <div className="w-full h-full px-5">
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-[1313px] flex flex-wrap justify-between xl:justify-center xl:gap-10">
+        <div className="w-full max-w-[1313px] flex flex-wrap justify-between xl:justify-center xl:gap-10 mob:justify-start">
           <Text as="h2" className="">
             Our <span className="text-gold">Expertise</span>
           </Text>
