@@ -30,7 +30,7 @@ const TeamSlider = () => {
           slidesPerView={1}
           // activeIndex={activeIndex}
           initialSlide={2}
-          spaceBetween={70}
+          spaceBetween={20}
           centeredSlides={true}
           // scrollbar={true}
           breakpoints={{

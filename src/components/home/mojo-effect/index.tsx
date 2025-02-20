@@ -11,7 +11,7 @@ const MojoEffect = () => {
   return (
     <div className="w-full h-full mojoeffect-gradient px-5">
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-[1313px]">
+        <div className="w-full max-w-[1236px]">
           <Text as="h2" className="text-center mt-[40px] mb-[128px]">
             The <span className="text-gold">MOJO Effect</span> Isn&apos;t Just A
             Transaction It&apos;s A Transformation

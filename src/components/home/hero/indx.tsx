@@ -7,7 +7,7 @@ const HomeHero = () => {
   return (
     <div className="w-full h-full mt-[76px] px-5">
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-[1313px]">
+        <div className="w-full max-w-[1236px]">
           <Text as="h1">
             Innovative <span className="text-gold">Mojo</span>
           </Text>

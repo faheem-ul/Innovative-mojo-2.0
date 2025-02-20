@@ -17,7 +17,7 @@ const Projects = () => {
   return (
     <div className="w-full h-full px-5">
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-[1224px]">
+        <div className="w-full max-w-[1236px]">
           <div className="flex justify-between w-full xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]">
             {/* <Image src={tactIq} alt="tactIq" className="w-full max-w-[604px]" /> */}
             <ReusableProject
