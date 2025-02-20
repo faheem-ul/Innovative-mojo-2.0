@@ -5,7 +5,7 @@ const AboutHero = () => {
   return (
     <div className="w-full h-full mt-[126px] px-5">
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-[1313px]">
+        <div className="w-full max-w-[1236px]">
           <Text as="h1">
             About <span className="text-gold">Innovative </span>
           </Text>
