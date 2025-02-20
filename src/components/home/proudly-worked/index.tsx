@@ -15,15 +15,20 @@ const partners = [google, intel, tennese, foodie, ivry, bulldog, eee];
 
 const HomeProudly = () => {
   return (
-    <div className="w-full h-full mt-[174px]">
+    <div className="w-full h-full mt-[174px] mob:mt-[60px] px-5">
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full max-w-[1108px]">
           <Text as="h2" className="mb-[123px] text-center">
             We have proudly <span className="text-gold">worked </span> with
           </Text>
-          <div className="flex gap-[99px] flex-wrap justify-center items-center">
+          <div className="flex gap-[99px] flex-wrap justify-center items-center mob:gap-[50px]">
             {partners.map((partner, index) => (
-              <Image key={index} src={partner} alt="" className="" />
+              <Image
+                key={index}
+                src={partner}
+                alt=""
+                className="mob:w-full max-w-[122px]"
+              />
             ))}
             {/* <Image
               src="/images/home/partner-logos/amazon.png"

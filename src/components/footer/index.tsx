@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-col md:flex-row md:gap-20 mt-10 md:mt-0 text-center mob:flex-col md:text-left mob:items-start mob:w-full">
+        <div className="flex flex-col md:flex-row md:gap-20 mt-10 md:mt-0 text-center mob:flex-col md:text-left mob:items-start mob:w-full mob:gap-[18px]">
           {/* Links */}
           <ul className="space-y-[18px] mob:text-left">
             <li>

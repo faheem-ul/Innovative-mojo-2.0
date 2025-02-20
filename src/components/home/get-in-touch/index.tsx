@@ -10,10 +10,10 @@ const HomeGetinTouch = () => {
         <div className="w-full max-w-[1313px]">
           <Text as="h2" className="text-center mt-[159px] mb-[190px]">
             Dive Into Unparalleled{" "}
-            <span className="text-gold">Digital Transformation</span>
-            With Innovative MOJO
+            <span className="text-gold">Digital Transformation</span> With
+            Innovative MOJO
           </Text>
-          <div className="flex justify-between xl:flex-col xl:justify-center xl:items-center">
+          <div className="flex justify-between xl:flex-col xl:justify-center xl:items-center mob:gap-[83px]">
             <div>
               <Text as="h2" className="mb-[20px] text-gold">
                 Get in touch
@@ -23,7 +23,7 @@ const HomeGetinTouch = () => {
                 Let’s build a digital legacy that lasts.
               </Text>
             </div>
-            <div className="w-full max-w-[50%] xl:max-w-fi">
+            <div className="w-full max-w-[50%] xl:max-w-full">
               <form action="" className="w-full">
                 <input
                   type="text"
