@@ -47,3 +47,24 @@ body {
     #000000 100%
   );
 }
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: relative;
+  margin-top: 60px;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  background-color: #f5d06f;
+}
+
+.marquee-bg {
+  background: var(
+    --SecundaryBrandColor-SecundaryBrandColor-50,
+    rgba(245, 208, 111, 0.1)
+  );
+  backdrop-filter: blur(500px);
+}
