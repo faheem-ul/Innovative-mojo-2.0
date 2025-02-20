@@ -14,12 +14,6 @@ export default function Home() {
       <HomeVideos />
       <MojoEffect />
       <HomeGetinTouch />
-      {/* <HomeServices />
-      <HomeFeatured />
-      <HomeAbout />
-      <HomeCaseStudies />
-      <HomeTestimonials />
-      <HomeContact /> */}
     </>
   );
 }

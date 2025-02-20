@@ -11,14 +11,14 @@ const HomeHero = () => {
           <Text as="h1">
             Innovative <span className="text-gold">Mojo</span>
           </Text>
-          <Text className="text-[35px] font-semibold leading-[38px] mb-[121px]">
+          <Text className="text-[35px] font-semibold leading-[38px] mb-[121px] mob:mb-[60px] mob:text-center mob:mt-1">
             Where AI meets creativity for unstoppable{" "}
             <span className="text-gold"> brand growth</span>
           </Text>
           <Image
             src={video}
             alt=""
-            className="w-full min-h-[800px] mb-[174px]"
+            className="w-full min-h-[800px] mob:min-h-full mb-[174px] mob:mb-[60px]"
           />
         </div>
       </div>
