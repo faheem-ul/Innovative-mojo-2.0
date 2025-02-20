@@ -37,7 +37,7 @@ const Text = forwardRef<HTMLHeadingElement | HTMLParagraphElement, Props>(
         <h2
           ref={ref}
           className={cn(
-            "font-poppins text-[60px] font-bold leading-[72px] text-primary mob:text-[48px] mob:leading-[60px]",
+            "font-poppins text-[48px] font-bold leading-[72px] text-primary mob:text-[48px] mob:leading-[60px]",
             className
           )}
           onClick={onClick}

@@ -39,3 +39,11 @@ body {
   border: 1px solid
     var(--SecundaryBrandColor-SecundaryBrandColor, rgba(245, 208, 111, 1));
 }
+
+.project-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(235, 193, 92, 0.3) 20%,
+    #000000 100%
+  );
+}
