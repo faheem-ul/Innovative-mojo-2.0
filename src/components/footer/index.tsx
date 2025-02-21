@@ -1,5 +1,10 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+
+import { usePathname } from "next/navigation";
+
+import { cn } from "@/lib/utils";
 
 import Text from "../ui/Text";
 
@@ -10,6 +15,7 @@ import linkedin from "@/public/images/footer/linkedin.svg";
 import footerBg from "@/public/images/footer/footerbg.png";
 
 const Footer = () => {
+  const currentpathname = usePathname();
   return (
     <footer className="relative text-white min-h-[700px] flex justify-center items-center">
       {/* Background Image using <Image> */}
@@ -19,7 +25,10 @@ const Footer = () => {
           alt="Footer Background"
           layout="fill"
           quality={100}
-          className="opacity-70"
+          className={cn(
+            "",
+            currentpathname === "/packages" ? "mojoeffect-gradient" : ""
+          )}
         />
       </div>
 

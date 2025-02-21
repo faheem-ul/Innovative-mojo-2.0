@@ -15,7 +15,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const currentPathname = usePathname();
-  console.log(currentPathname);
+  // console.log(currentPathname);
 
   //   const [ServicesToggle, setServicesToggle] = useState(false);
   //   const [BooknowToggle, setBooknowToggle] = useState(false);
@@ -241,7 +241,8 @@ const Navbar = () => {
                           className={cn(
                             "block text-[18px] font-poppins font-normal leading-[25.5px] text-primary",
 
-                            currentPathname === "/packages"
+                            currentPathname === "/packages" ||
+                              currentPathname === "/mojo-minute"
                               ? "text-[#BA7802]"
                               : "text-primary"
                           )}
@@ -432,7 +433,7 @@ const Navbar = () => {
                           href="/packages"
                           className={cn(
                             "block text-[18px] font-poppins font-medium leading-[25.5px]",
-                            currentPathname === "/packages"
+                            currentPathname === "/packages" || "/mojo-minute"
                               ? "text-[#BA7802]"
                               : "text-primary"
                           )}
