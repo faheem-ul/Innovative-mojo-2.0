@@ -335,7 +335,7 @@ const Navbar = () => {
                           <a
                             href="/projects"
                             className={cn(
-                              "text-[18px] pl-5 font-medium text-white text-center",
+                              "text-[18px] font-medium text-white text-center",
                               currentPathname === "/projects"
                                 ? "text-[#BA7802]"
                                 : "text-primary"
@@ -449,7 +449,7 @@ const Navbar = () => {
                         >
                           <Link
                             href="/"
-                            className="text-[18px] pl-5 font-medium text-white text-center"
+                            className="text-[18px] font-medium text-white text-center"
                             onClick={(e) => e.stopPropagation()}
                           >
                             Let&apos;s work together
