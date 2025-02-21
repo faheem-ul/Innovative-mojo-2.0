@@ -1,7 +1,13 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Keyboard, Navigation, Scrollbar, Pagination } from "swiper/modules";
+import {
+  Keyboard,
+  Navigation,
+  Scrollbar,
+  Pagination,
+  Autoplay,
+} from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/scrollbar";
@@ -43,6 +49,12 @@ const TeamSlider = () => {
               //   spaceBetween: 30,
             },
           }}
+          autoplay={{
+            delay: 1500,
+
+            disableOnInteraction: false,
+          }}
+          speed={4000}
           loop={true}
           pagination={true}
           navigation={{
@@ -50,7 +62,7 @@ const TeamSlider = () => {
 
             prevEl: ".custom-prev",
           }}
-          modules={[Keyboard, Navigation, Scrollbar, Pagination]}
+          modules={[Keyboard, Navigation, Scrollbar, Pagination, Autoplay]}
           className="team-slider-mySwiper"
         >
           <SwiperSlide>

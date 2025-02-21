@@ -22,7 +22,7 @@ const MojoEffect = () => {
               alt="mojoimage"
               className="w-full max-w-[27.5%] 2xl:max-w-[19%] mob:max-w-full"
             />
-            <div className="flex flex-wrap 2xl:justify-center justify-between w-full max-w-[70%] gap-y-[44px] 2xl:max-w-[60%] 2xl:gap-10 mob:max-w-full">
+            <div className="flex flex-wrap 2xl:justify-center justify-between w-full max-w-[69%] gap-y-[44px] 2xl:max-w-[60%] 2xl:gap-10 mob:max-w-full">
               <Card
                 heading="Innovative Mojo Effect"
                 description="Discover the magic of Mojo by creating unique and captivating experiences for your customers."

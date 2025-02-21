@@ -1,5 +1,10 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+
+import { usePathname } from "next/navigation";
+
+import { cn } from "@/lib/utils";
 
 import Text from "../ui/Text";
 
@@ -10,8 +15,9 @@ import linkedin from "@/public/images/footer/linkedin.svg";
 import footerBg from "@/public/images/footer/footerbg.png";
 
 const Footer = () => {
+  const currentpathname = usePathname();
   return (
-    <footer className="relative text-white min-h-[835px] flex justify-center items-center">
+    <footer className="relative text-white min-h-[700px] flex justify-center items-center">
       {/* Background Image using <Image> */}
       <div className="absolute inset-0 w-full h-full">
         <Image
@@ -19,7 +25,10 @@ const Footer = () => {
           alt="Footer Background"
           layout="fill"
           quality={100}
-          className="opacity-70"
+          className={cn(
+            "",
+            currentpathname === "/packages" ? "mojoeffect-gradient" : ""
+          )}
         />
       </div>
 
@@ -35,7 +44,7 @@ const Footer = () => {
             className="mb-5 mx-auto md:mx-0"
           />
 
-          <Text as="h3" className="">
+          <Text as="h3" className="text-[26px] leading-[37px]">
             Innovative MOJO{" "}
             <span className="text-gold">20+ years of experience</span>, powered
             by real conversations and real solutions.
@@ -47,24 +56,34 @@ const Footer = () => {
           {/* Links */}
           <ul className="space-y-[18px] mob:text-left">
             <li>
-              <Link href="#" className="text-[20px] font-poppins">
+              <a href="/" className="text-[16px] font-poppins">
                 Home
-              </Link>
+              </a>
             </li>
             <li>
-              <Link href="#" className="text-[20px] font-poppins">
+              <a href="/projects" className="text-[16px] font-poppins">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="/" className="text-[16px] font-poppins">
+                News
+              </a>
+            </li>
+            <li>
+              <a href="/" className="text-[16px] font-poppins">
                 Help center
-              </Link>
+              </a>
             </li>
             <li>
-              <Link href="#" className="text-[20px] font-poppins">
+              <a href="/" className="text-[16px] font-poppins">
                 Privacy policy
-              </Link>
+              </a>
             </li>
             <li>
-              <Link href="#" className="text-[20px] font-poppins">
+              <a href="/" className="text-[16px] font-poppins">
                 Terms and conditions
-              </Link>
+              </a>
             </li>
           </ul>
           <div>
@@ -73,25 +92,25 @@ const Footer = () => {
               <li>
                 <Link
                   href="mailto:sales@innovativemojo.com"
-                  className="text-[20px] font-poppins"
+                  className="text-[16px] font-poppins"
                 >
                   sales@innovativemojo.com
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-[20px] font-poppins">
+                <Link href="#" className="text-[16px] font-poppins">
                   Schedule a meeting
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-[20px] font-poppins">
+                <Link href="#" className="text-[16px] font-poppins">
                   Work with us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-[20px] font-poppins">
+                <a href="/" className="text-[16px] font-poppins">
                   Innovativemojo.com
-                </Link>
+                </a>
               </li>
             </ul>
             {/* Social Media Icons */}

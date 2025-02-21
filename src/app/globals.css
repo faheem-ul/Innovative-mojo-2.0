@@ -34,6 +34,9 @@ body {
     rgba(245, 208, 111, 0.3) 100%
   );
 }
+.row-gap {
+  row-gap: 44px;
+}
 
 .input-gradient {
   border: 1px solid
