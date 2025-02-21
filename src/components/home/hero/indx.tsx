@@ -11,7 +11,7 @@ const HomeHero = () => {
           <Text as="h1">
             Innovative <span className="text-gold">Mojo</span>
           </Text>
-          <Text className="text-[35px] font-semibold leading-[38px] mb-[121px] mob:mb-[60px] mob:text-center mob:mt-1">
+          <Text className="text-[32px] font-semibold leading-[38px] mb-[121px] mob:mb-[60px] mob:text-center mob:mt-1">
             Where AI meets creativity for unstoppable{" "}
             <span className="text-gold"> brand growth</span>
           </Text>
