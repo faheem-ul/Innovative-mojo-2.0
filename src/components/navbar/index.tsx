@@ -15,7 +15,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const currentPathname = usePathname();
-  console.log(currentPathname);
+  // console.log(currentPathname);
 
   //   const [ServicesToggle, setServicesToggle] = useState(false);
   //   const [BooknowToggle, setBooknowToggle] = useState(false);
@@ -237,8 +237,15 @@ const Navbar = () => {
                       </li>
                       <li className="flex">
                         <Link
-                          href="/"
-                          className="block  text-[18px] font-poppins font-normal leading-[25.5px] text-primary"
+                          href="/packages"
+                          className={cn(
+                            "block text-[18px] font-poppins font-normal leading-[25.5px] text-primary",
+
+                            currentPathname === "/packages" ||
+                              currentPathname === "/mojo-minute"
+                              ? "text-[#BA7802]"
+                              : "text-primary"
+                          )}
                         >
                           Packages
                         </Link>
@@ -335,7 +342,7 @@ const Navbar = () => {
                           <a
                             href="/projects"
                             className={cn(
-                              "text-[18px] pl-5 font-medium text-white text-center",
+                              "text-[18px] font-medium text-white text-center",
                               currentPathname === "/projects"
                                 ? "text-[#BA7802]"
                                 : "text-primary"
@@ -423,8 +430,13 @@ const Navbar = () => {
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
 
                         <a
-                          href="/our-doctors"
-                          className="block  text-[18px] font-poppins font-medium leading-[25.5px] text-primary  "
+                          href="/packages"
+                          className={cn(
+                            "block text-[18px] font-poppins font-medium leading-[25.5px]",
+                            currentPathname === "/packages" || "/mojo-minute"
+                              ? "text-[#BA7802]"
+                              : "text-primary"
+                          )}
                         >
                           <li className="flex justify-center py-[15px] list-items">
                             Packages
@@ -449,7 +461,7 @@ const Navbar = () => {
                         >
                           <Link
                             href="/"
-                            className="text-[18px] pl-5 font-medium text-white text-center"
+                            className="text-[18px] font-medium text-white text-center"
                             onClick={(e) => e.stopPropagation()}
                           >
                             Let&apos;s work together
