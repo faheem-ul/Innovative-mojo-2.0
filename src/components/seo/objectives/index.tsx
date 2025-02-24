@@ -7,7 +7,7 @@ import transparent from "@/public/images/services/transparent.svg";
 import user from "@/public/images/services/user-centric.svg";
 const SeoObjectives = () => {
   return (
-    <div className="w-full h-full px-5 mojoeffect-gradient pt-[140px] pb-[150px]">
+    <div className="w-full h-full px-5 mojoeffect-gradient pt-[140px] pb-[150px] mob:py-[80px]">
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full max-w-[1236px] flex flex-wrap justify-between xl:justify-center xl:gap-10 mob:justify-start">
           <ObjectivesReusable

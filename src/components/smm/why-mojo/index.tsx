@@ -3,7 +3,7 @@ import React from "react";
 import Whymojo from "@/components/services-pages-reusable/Whymojo";
 import Text from "@/components/ui/Text";
 
-import seo from "@/public/images/services/whyforseo.png";
+import sm from "@/public/images/services/social-media.png";
 
 const SeoBulletpoints = [
   "A team of seasoned SEO specialists with a track record of growing organic traffic.",
@@ -21,7 +21,7 @@ const SMMWhyMojo = () => {
             <span className="text-gold"> Social Media?</span>
           </Text>
           <div className="w-full flex justify-between items-center">
-            <Whymojo image={seo} bulletpoints={SeoBulletpoints} />
+            <Whymojo image={sm} bulletpoints={SeoBulletpoints} />
           </div>
         </div>
       </div>
