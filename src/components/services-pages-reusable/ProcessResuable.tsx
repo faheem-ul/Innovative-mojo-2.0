@@ -19,7 +19,7 @@ const ProcessResuable: React.FC<props> = ({
         <div className="w-[35px] h-[35px] rounded-full border border-gold flex justify-center items-center mx-auto">
           <Text className="text-[19px] font-semibold">{processNumber}</Text>
         </div>
-        <Text className="text-center font-semibold text-[21px] mob:text-[21px] mt-[11px] leading-[30px] flex justify-center items-center">
+        <Text className="text-center font-semibold text-[21px] mob:text-[21px] mt-[15px] leading-[30px] flex justify-center items-center">
           {title}
         </Text>
         <Text className="mt-[8px] text-center text-[14px] mob:text-[14px]">
