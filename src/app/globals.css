@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #181818;
-  }
-}
-
 body {
   background: #181818;
 }
@@ -70,4 +64,26 @@ body {
     rgba(245, 208, 111, 0.1)
   );
   backdrop-filter: blur(500px);
+}
+
+/* border-beam-animaton */
+
+.glow {
+  animation: move 10s linear infinite;
+  offset-path: rect(0% auto 100% auto);
+  background: radial-gradient(#f5d06f, #f5d06f, transparent);
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.image-rotate {
+  transform: rotateX(18deg);
 }
