@@ -1,13 +1,14 @@
 import React from "react";
 
 import Text from "@/components/ui/Text";
+import TypeWriterText from "@/components/ui/TypeWriterText";
 const AboutHero = () => {
   return (
     <div className="w-full h-full mt-[126px] px-5">
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full max-w-[1236px]">
-          <Text as="h1">
-            About <span className="text-gold">Innovative </span>
+          <Text as="h1" className="flex gap-10">
+            About <TypeWriterText AnimatatedWords={["Innovative"]} />
           </Text>
           <Text className="mb-[195px] w-full max-w-[875px] mt-[25px] mob:mb-[96px]">
             At Innovative MOJO, we harness the power of AI-driven marketing,
