@@ -20,11 +20,28 @@ const ServiceReusable: React.FC<props> = ({
   return (
     <div
       className={cn(
-        "w-full flex justify-between flex-wrap navsize:justify-center navsize:gap-[50px] items-center",
+        "w-full flex justify-between  flex-wrap navsize:justify-center navsize:gap-[50px] items-center",
         classname
       )}
     >
-      <Image src={image} alt="service icon" className="w-full max-w-[611px]" />
+      <div className="overflow-hidden p-[3px] relative rounded-[8px] bg-[#181818]">
+        <div className="glow inset-0 w-[400px] h-[400px] absolute rotate-45"></div>
+        <div className="w-[611px] bg-[#181818] rounded-md z-10 relative">
+          <Image
+            src={image}
+            alt="service icon"
+            className=" relative w-full h-full bg-secondary"
+          />
+        </div>
+      </div>
+      {/* <div className="overflow-hidden ">
+      <Image
+        src={image}
+        alt="service icon"
+        className="relative w-full max-w-[611px] "
+      />
+      </div> */}
+
       <div className="max-w-[504px]">
         <Text className="text-gold text-[25px] mob:text-[32px] font-semibold mb-[18px] text-center">
           {title}

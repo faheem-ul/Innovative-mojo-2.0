@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import AosProvider from "@/providers/Aos";
 
 import "./globals.css";
 
@@ -25,9 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable}`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <AosProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </AosProvider>
       </body>
     </html>
   );
