@@ -33,14 +33,14 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
             <Text as="h1" className="text-gold">
               {project.title}
             </Text>
-            <Text className="mt-[29px] max-w-[875px]">
+            <Text className="mt-[29px] max-w-[875px] mob:text-center">
               {project.description}
             </Text>
           </div>
           {/* Hero Section */}
 
           {/* Process Section */}
-          <div className="flex justify-between flex-wrap navsize:justify-center navsize:gap-[40px] w-full mt-[236px] mb-[302px]">
+          <div className="flex justify-between flex-wrap navsize:justify-center navsize:gap-[40px] w-full mt-[236px] mob:my-[70px] mb-[302px]">
             <div className="w-full max-w-[610px]">
               <Text className="text-gold mb-[25px] navsize:mb-[20px]" as="h2">
                 Process
@@ -60,7 +60,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
           {/* Process Cards */}
 
           {/* results */}
-          <div className="flex justify-between flex-wrap 2xl:justify-center w-full mob:gap-[40px] mt-[179px] mb-[211px]">
+          <div className="flex justify-between flex-wrap 2xl:justify-center w-full mob:gap-[40px] mt-[179px] mob:my-[80px] mb-[211px]">
             <div>
               <Text as="h2" className="text-gold mb-[90px] mob:mb-[20px]">
                 Results

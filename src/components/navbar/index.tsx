@@ -268,8 +268,13 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          href="/contact-us"
-                          className="block  text-[18px] font-poppins font-normal leading-[25.5px] text-primary  "
+                          href="/news"
+                          className={cn(
+                            "block text-[18px] font-poppins font-normal leading-[25.5px]",
+                            currentPathname === "/news"
+                              ? "text-[#BA7802]"
+                              : "text-primary"
+                          )}
                         >
                           News
                         </Link>

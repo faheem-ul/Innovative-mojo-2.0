@@ -31,7 +31,7 @@ const ReusableCard: React.FC<props> = ({
       <div>
         <Text
           as="h3"
-          className="text-[25px] mob:text-[20px] mob:min-h-max text-center min-h-[70px] flex justify-center items-center mb-[38px] mob:mb-5"
+          className="text-[27px] mob:text-[20px] mob:min-h-max text-center min-h-[70px] flex justify-center items-center mb-[38px] mob:mb-5"
         >
           {heading}
         </Text>

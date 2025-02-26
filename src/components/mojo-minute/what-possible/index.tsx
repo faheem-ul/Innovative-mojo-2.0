@@ -15,7 +15,7 @@ const MojoMinuteWhatPossible = () => {
           <Text as="h2" className="mb-[60px] text-center">
             See What&apos;s <span className="text-gold">Possible</span>
           </Text>
-          <div className="flex flex-wrap mb-[170px] mob:mb-[40px] justify-between navsize:justify-center navsize:gap-[30px]">
+          <div className="flex mb-[170px] mob:mb-[40px] justify-between navsize:flex-col navsize:items-center navsize:justify-center navsize:gap-[30px]">
             <div>
               <Image
                 src={selectheal}

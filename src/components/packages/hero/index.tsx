@@ -9,8 +9,8 @@ const PackagesHero = () => {
           <Text as="h1" className="">
             Innovative <span className="text-gold">Packages</span>
           </Text>
-          <Text className="text-[32px] font-semibold leading-[38px] mb-[75px] mob:mb-[60px] mob:text-center mob:mt-1">
-            The <span className="text-gold">Mojo</span>
+          <Text className="text-[32px] font-semibold leading-[38px] mt-4 mb-[75px] mob:mb-[60px] mob:text-center mob:mt-1">
+            The <span className="text-gold"> Mojo</span>
             Digital Transformation Package
           </Text>
         </div>
