@@ -253,8 +253,14 @@ const Navbar = () => {
                       </li>
                       <li className="flex">
                         <Link
-                          href="/"
-                          className="block  text-[18px] font-poppins font-normal leading-[25.5px] text-primary"
+                          href="/services"
+                          className={cn(
+                            "block  text-[18px] font-poppins font-normal leading-[25.5px] text-primary",
+
+                            currentPathname === "/services"
+                              ? "text-[#BA7802]"
+                              : "text-primary"
+                          )}
                         >
                           Services
                         </Link>
@@ -445,7 +451,12 @@ const Navbar = () => {
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
                         <a
                           href="/contact-us"
-                          className="block  text-[18px] font-poppins font-medium leading-[25.5px] text-primary  "
+                          className={cn(
+                            "block text-[18px] font-poppins font-medium leading-[25.5px] text-primary",
+                            currentPathname === "/services"
+                              ? "text-[#BA7802]"
+                              : "text-primary"
+                          )}
                         >
                           <li className="flex justify-center py-[15px] list-items">
                             Services
