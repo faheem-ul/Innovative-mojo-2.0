@@ -19,18 +19,13 @@ const Projects = () => {
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full max-w-[1236px]">
           <div className="flex justify-between w-full xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]">
-            {/* <Image src={tactIq} alt="tactIq" className="w-full max-w-[604px]" /> */}
             <ReusableProject
               image={tactIq}
               className="w-full max-w-[604px]"
               overlayText="TactIQ Website"
               buttonHref="/"
             />
-            {/* <Image
-              src={foundation1890}
-              alt="tactIq"
-              className="w-full max-w-[604px]"
-            /> */}
+
             <ReusableProject
               image={foundation1890}
               className="w-full max-w-[604px]"
@@ -40,33 +35,20 @@ const Projects = () => {
           </div>
           <div className="flex justify-between mt-[31px] xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]">
             <div className="flex flex-wrap w-full max-w-[604px] gap-[16px] justify-center items-center mob:w-full">
-              {/* <Image
-                src={tenesse}
-                alt="bulldog"
-                className="w-full max-w-[294px]"
-              /> */}
               <ReusableProject
                 image={tenesse}
                 className="w-full max-w-[294px] mob:max-w-full"
                 overlayText="Tenessee State University"
                 buttonHref="/"
               />
-              {/* <Image
-                src={bulldog}
-                alt="bullbrothers"
-                className="w-full max-w-[294px]"
-              /> */}
+
               <ReusableProject
                 image={bulldog}
                 className="w-full max-w-[294px] mob:max-w-full"
                 overlayText="Bulldog"
                 buttonHref="/"
               />
-              {/* <Image
-                src={bulkbrothers}
-                alt="davidBacksmith"
-                className="w-full max-w-[294px]"
-              /> */}
+
               <ReusableProject
                 image={bulkbrothers}
                 className="w-full max-w-[294px] mob:max-w-full"
@@ -80,7 +62,6 @@ const Projects = () => {
                 buttonHref="/"
               />
             </div>
-            {/* <Image src={eee} alt="tactIq" className="w-full max-w-[604px]" /> */}
             <ReusableProject
               image={selectHeal}
               className="w-full max-w-[604px] h-full"
@@ -89,18 +70,12 @@ const Projects = () => {
             />
           </div>
           <div className="flex justify-between w-full mt-[31px] xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]">
-            {/* <Image
-              src={davidBacksmith}
-              alt="davidBacksmith"
-              className="w-full max-w-[604px]"
-            /> */}
             <ReusableProject
               image={davidBacksmith}
               className="w-full max-w-[604px]"
               overlayText=" David Starbuck Smith"
               buttonHref="/"
             />
-            {/* <Image src={iviry} alt="iviry" className="w-full max-w-[294px]" /> */}
             <div className="xl:w-full justify-center gap-[12px] flex xl:justify-center xl:gap-[20px] mob:flex-col">
               <ReusableProject
                 image={iviry}
@@ -108,7 +83,6 @@ const Projects = () => {
                 overlayText="Iviry"
                 buttonHref="/"
               />
-              {/* <Image src={foodie} alt="foodie" className="w-full max-w-[294px]" /> */}
               <ReusableProject
                 image={foodie}
                 className="w-full max-w-[294px] mob:max-w-full"

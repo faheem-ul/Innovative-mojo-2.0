@@ -10,7 +10,7 @@ const MojoMinuteHero = () => {
           <Text as="h1">
             Mojo <span className="text-gold">Minute</span>
           </Text>
-          <Text className="mb-[170px] mob:mb-[60px] mob:text-center mob:mt-10">
+          <Text className="mb-[170px] mob:mb-[60px] mob:text-center mt-10">
             Elevate your brand&apos;s story in just a minute with our MOJO
             Minute Package. This dynamic videography solution is crafted to
             deliver maximum impact in a concise and engaging format. Perfect for
