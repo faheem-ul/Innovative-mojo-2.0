@@ -46,14 +46,22 @@ const HomeHero = () => {
     <div className="w-full h-full mt-[76px] px-5">
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full max-w-[1236px]">
-          <Text as="h1" className="flex gap-10 mob:flex-col mob:gap-0">
+          <Text as="h1" className="flex gap-6 mob:flex-col mob:gap-0">
             Innovative{" "}
             <span>
-              <TypeWriterText AnimatatedWords={["Mojo"]} />
+              <TypeWriterText
+                AnimatatedWords={[
+                  "Mojo",
+                  "AI",
+                  "Design",
+                  "Marketing",
+                  "Development",
+                ]}
+              />
             </span>
           </Text>
 
-          <Text className="text-[32px] font-semibold leading-[38px] mb-[121px] mob:mb-[60px] mob:text-center mob:mt-1">
+          <Text className="text-[32px] font-semibold leading-[38px] mb-[121px] mt-2 mob:mb-[60px] mob:text-center mob:mt-1">
             Where AI meets creativity for unstoppable{" "}
             <span className="text-gold"> brand growth</span>
           </Text>

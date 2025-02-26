@@ -24,13 +24,13 @@ const ServiceReusable: React.FC<props> = ({
         classname
       )}
     >
-      <div className="overflow-hidden p-[3px] relative rounded-[8px] bg-[#181818]">
-        <div className="glow inset-0 w-[400px] h-[400px] absolute rotate-45"></div>
-        <div className="w-[611px] bg-[#181818] rounded-md z-10 relative">
+      <div className="overflow-hidden p-[3px] relative rounded-[20px] bg-[#181818]">
+        <div className="glow inset-0 w-[400px] rounded-[20px] h-[400px] absolute rotate-45"></div>
+        <div className="w-[611px] rounded-[16px] bg-[#181818] z-10 relative">
           <Image
             src={image}
             alt="service icon"
-            className=" relative w-full h-full bg-secondary"
+            className=" relative w-full rounded-[17px] h-full bg-secondary"
           />
         </div>
       </div>
@@ -46,7 +46,7 @@ const ServiceReusable: React.FC<props> = ({
         <Text className="text-gold text-[25px] mob:text-[32px] font-semibold mb-[18px] text-center">
           {title}
         </Text>
-        <Text className="text-[16px]">{description}</Text>
+        <Text className="text-[16px] text-center">{description}</Text>
       </div>
     </div>
   );
