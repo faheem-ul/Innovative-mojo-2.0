@@ -51,7 +51,6 @@ const TeamSlider = () => {
           }}
           autoplay={{
             delay: 1500,
-
             disableOnInteraction: false,
           }}
           speed={4000}
