@@ -9,6 +9,7 @@ interface props {
   icon: StaticImageData;
   heading: string;
   classname?: string;
+  duration: string;
   description: string[];
 }
 
@@ -17,6 +18,7 @@ const ReusableCard: React.FC<props> = ({
   heading,
   classname,
   description,
+  duration,
 }) => {
   return (
     <div
@@ -24,6 +26,10 @@ const ReusableCard: React.FC<props> = ({
         "bg-secondary rounded-tl-[16px] rounded-bl-[16px] pt-[50px] pb-[48px] px-3 max-w-[401px]",
         classname
       )}
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration={duration}
+      data-aos-easing="ease-in-out"
     >
       <div>
         <Image src={icon} alt="icon" className="mb-4 mx-auto" />

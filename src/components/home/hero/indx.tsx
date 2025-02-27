@@ -43,7 +43,13 @@ const HomeHero = () => {
   }, []);
 
   return (
-    <div className="w-full h-full mt-[76px] px-5">
+    <div
+      className="w-full h-full mt-[76px] px-5"
+      data-aos="zoom-in"
+      data-aos-delay="200"
+      data-aos-duration="800"
+      data-aos-easing="ease-in-out"
+    >
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full max-w-[1236px]">
           <Text as="h1" className="flex gap-6 mob:flex-col mob:gap-0">

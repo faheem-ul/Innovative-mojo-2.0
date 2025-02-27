@@ -11,8 +11,22 @@ interface props {
 const Whymojo: React.FC<props> = ({ image, bulletpoints }) => {
   return (
     <div className="w-full flex justify-between items-start navsize:flex-col navsize:justify-center navsize:gap-[30px]">
-      <Image src={image} alt="WhyMojo" className="w-full max-w-[605px]" />
-      <ul className="font-poppins text-[25px] mob:text-[20px] mob:leading-[22px] font-normal text-white list-disc pl-[55px] navsize:pl-5">
+      <Image
+        src={image}
+        alt="WhyMojo"
+        className="w-full max-w-[605px]"
+        data-aos="fade-down"
+        data-aos-delay="200"
+        data-aos-duration="800"
+        data-aos-easing="ease-in-out"
+      />
+      <ul
+        className="font-poppins text-[25px] mob:text-[20px] mob:leading-[22px] font-normal text-white list-disc pl-[55px] navsize:pl-5"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="800"
+        data-aos-easing="ease-in-out"
+      >
         {bulletpoints.map((bullet, index) => (
           <li
             key={index}

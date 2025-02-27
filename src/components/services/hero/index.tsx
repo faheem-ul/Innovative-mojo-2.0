@@ -5,7 +5,13 @@ const ServicesHero = () => {
   return (
     <div className="w-full h-full px-5 mb-[358px] mob:mt-[50px] mt-[76px] mob:mb-[90px] relative overflow-hidden">
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-[1236px] ">
+        <div
+          className="w-full max-w-[1236px]"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <Text as="h1" className="mb-[40px] mob:mb-[30px]">
             Innovative <span className="text-gold">Services</span>
           </Text>

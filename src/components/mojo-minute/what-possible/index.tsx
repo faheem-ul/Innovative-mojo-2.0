@@ -11,7 +11,13 @@ const MojoMinuteWhatPossible = () => {
   return (
     <div className="w-full h-full mt-[76px] px-5">
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-[1236px]">
+        <div
+          className="w-full max-w-[1236px]"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+        >
           <Text as="h2" className="mb-[60px] text-center">
             See What&apos;s <span className="text-gold">Possible</span>
           </Text>

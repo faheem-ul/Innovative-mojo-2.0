@@ -17,7 +17,13 @@ import footerBg from "@/public/images/footer/footerbg.png";
 const Footer = () => {
   const currentpathname = usePathname();
   return (
-    <footer className="relative text-white min-h-[700px] flex justify-center items-center">
+    <footer
+      className="relative text-white min-h-[700px] flex justify-center items-center"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       {/* Background Image using <Image> */}
       <div className="absolute inset-0 w-full h-full">
         <Image
