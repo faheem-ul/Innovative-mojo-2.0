@@ -22,6 +22,10 @@ const MojoEffect = () => {
               src={mojoimage}
               alt="mojoimage"
               className="w-full max-w-[385px] mob:max-w-full"
+              data-aos="fade-right"
+              data-aos-delay="200"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
             />
             <SwiperComponent />
             {/* <div className="flex flex-wrap 2xl:justify-center justify-between w-full max-w-[69%] gap-y-[44px] 2xl:max-w-[60%] 2xl:gap-10 mob:max-w-full">

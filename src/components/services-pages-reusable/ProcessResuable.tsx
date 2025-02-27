@@ -14,7 +14,13 @@ const ProcessResuable: React.FC<props> = ({
   description,
 }) => {
   return (
-    <div className=" border border-[#F5D06F] mob:max-w-full rounded-[14px] w-full max-w-[297px] min-h-[261px] flex justify-center items-center">
+    <div
+      className=" border border-[#F5D06F] mob:max-w-full rounded-[14px] w-full max-w-[297px] min-h-[261px] flex justify-center items-center"
+      data-aos="fade-down"
+      data-aos-delay="200"
+      data-aos-duration="800"
+      data-aos-easing="ease-in-out"
+    >
       <div className="w-full px-5">
         <div className="w-[35px] h-[35px] rounded-full border border-gold flex justify-center items-center mx-auto">
           <Text className="text-[19px] font-semibold">{processNumber}</Text>

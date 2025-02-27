@@ -7,14 +7,25 @@ const HomeGetinTouch = () => {
   return (
     <div className="w-full h-full px-5">
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-[1236px]">
+        <div
+          className="w-full max-w-[1236px]"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <Text as="h2" className="text-center mt-[159px] mb-[190px]">
             Dive Into Unparalleled{" "}
             <span className="text-gold">Digital Transformation</span> With
             Innovative MOJO
           </Text>
           <div className="flex justify-between xl:flex-col xl:justify-center xl:items-center mob:gap-[83px]">
-            <div>
+            <div
+            // data-aos="fade-right"
+            // data-aos-delay="200"
+            // data-aos-duration="1000"
+            // data-aos-easing="ease-in-out"
+            >
               <Text as="h2" className="mb-[20px] text-gold">
                 Get in touch
               </Text>
@@ -23,7 +34,13 @@ const HomeGetinTouch = () => {
                 Let’s build a digital legacy that lasts.
               </Text>
             </div>
-            <div className="w-full max-w-[50%] xl:max-w-full">
+            <div
+              className="w-full max-w-[50%] xl:max-w-full"
+              // data-aos="fade-left"
+              // data-aos-delay="200"
+              // data-aos-duration="1000"
+              // data-aos-easing="ease-in-out"
+            >
               <form action="" className="w-full">
                 <input
                   type="text"

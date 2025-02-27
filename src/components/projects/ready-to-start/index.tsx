@@ -7,7 +7,13 @@ import LinkButton from "@/components/ui/LinkButton";
 import vector from "@/public/images/projects/Vector.svg";
 const ReadytoStart = () => {
   return (
-    <div className="w-full h-full px-5 mt-[261px] mb-[163px] mob:mt-[90px]">
+    <div
+      className="w-full h-full px-5 mt-[261px] mb-[163px] mob:mt-[90px]"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full max-w-[1224px] border-2 border-gold rounded-[40px]">
           <Text as="h2" className="text-center mt-[55px]">

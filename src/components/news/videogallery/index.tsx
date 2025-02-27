@@ -71,7 +71,13 @@ export default function VideoGallery() {
   };
 
   return (
-    <div className="w-full h-full px-5 ">
+    <div
+      className="w-full h-full px-5"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full max-w-[1236px]">
           <Text as="h2" className="mb-5">
