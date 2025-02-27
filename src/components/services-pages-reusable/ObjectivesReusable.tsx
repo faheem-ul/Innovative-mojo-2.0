@@ -12,7 +12,13 @@ import Text from "../ui/Text";
 
 const ObjectivesReusable: React.FC<props> = ({ icon, title, description }) => {
   return (
-    <div className="w-full max-w-[400px] min-h-[318px] bg-secondary flex justify-center items-center rounded-tl-[16px] rounded-br-[16px]">
+    <div
+      className="w-full max-w-[400px] min-h-[318px] bg-secondary flex justify-center items-center rounded-tl-[16px] rounded-br-[16px]"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="800"
+      data-aos-easing="ease-in-out"
+    >
       <div className="px-5">
         <Image src={icon} alt="icon" className="mx-auto" />
         <Text

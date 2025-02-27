@@ -39,7 +39,13 @@ const Packages = () => {
   return (
     <div className="w-full h-full mt-[76px] px-5 mojoeffect-gradient py-[200px] mob:py-[100px]">
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-[1236px] flex justify-between flex-wrap xl:justify-center xl:gap-[68px]">
+        <div
+          className="w-full max-w-[1236px] flex justify-between flex-wrap xl:justify-center xl:gap-[68px]"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <ReusablePackage
             heading="MOJO Minute"
             description="A dynamic 45-60 second commercial here to boost your brand’s visibility and connect with your audience on social media."

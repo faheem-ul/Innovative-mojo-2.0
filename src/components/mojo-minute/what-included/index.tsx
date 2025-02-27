@@ -67,34 +67,46 @@ const MojoWhatIncluded = () => {
               heading="Consultation & Concept Development"
               icon={consultation}
               description={consultationBullets}
+              duration="800"
             />
             <ReusableCard
               heading="Scriptwriting & Storyboarding"
               icon={scriptwriting}
               description={scriptwritingBullets}
+              duration="1000"
             />
             <ReusableCard
               heading="Vision Board & Style Presentation"
               icon={vision}
               description={visionBullets}
+              duration="1200"
             />
             <ReusableCard
               heading="Filming & Production"
               icon={filimg}
               description={filmingBullets}
+              duration="1400"
             />
             <ReusableCard
               heading="Post-Production & Editing"
               icon={filimg}
               description={postProductionBullets}
+              duration="1600"
             />
             <ReusableCard
               heading="Final Delivery & Optimization"
               icon={final}
               description={finalDeliveryBullets}
+              duration="1800"
             />{" "}
           </div>
-          <div className="bg-secondary rounded-tl-[16px] rounded-bl-[16px] pt-[50px] pb-[48px] px-3 max-w-[747px] mt-[70px] mx-auto">
+          <div
+            className="bg-secondary rounded-tl-[16px] rounded-bl-[16px] pt-[50px] pb-[48px] px-3 max-w-[747px] mt-[70px] mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <div>
               <Image src={additional} alt="icon" className="mb-4 mx-auto" />
             </div>

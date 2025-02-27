@@ -18,7 +18,13 @@ const Projects = () => {
     <div className="w-full h-full px-5">
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full max-w-[1236px]">
-          <div className="flex justify-between w-full xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]">
+          <div
+            className="flex justify-between w-full xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]"
+            data-aos="fade-down"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <ReusableProject
               image={tactIq}
               className="w-full max-w-[604px]"
@@ -33,7 +39,13 @@ const Projects = () => {
               buttonHref="/"
             />
           </div>
-          <div className="flex justify-between mt-[31px] xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]">
+          <div
+            className="flex justify-between mt-[31px] xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <div className="flex flex-wrap w-full max-w-[604px] gap-[16px] justify-center items-center mob:w-full">
               <ReusableProject
                 image={tenesse}
@@ -69,7 +81,13 @@ const Projects = () => {
               buttonHref="/"
             />
           </div>
-          <div className="flex justify-between w-full mt-[31px] xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]">
+          <div
+            className="flex justify-between w-full mt-[31px] xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]"
+            data-aos="fade-down"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
             <ReusableProject
               image={davidBacksmith}
               className="w-full max-w-[604px]"

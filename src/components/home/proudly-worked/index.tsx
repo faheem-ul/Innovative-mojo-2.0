@@ -17,7 +17,13 @@ const HomeProudly = () => {
   return (
     <div className="w-full h-full mt-[174px] mob:mt-[60px] px-5">
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-[992px]">
+        <div
+          className="w-full max-w-[992px]"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
           <Text as="h2" className="mb-[123px] text-center">
             We have proudly <span className="text-gold">worked </span> with
           </Text>

@@ -53,8 +53,14 @@ const Navbar = () => {
   //   };
 
   return (
-    <div className="relative">
-      <nav className=" mob:min-h-max z-50  w-full px-5">
+    <div
+      className="relative"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="800"
+      data-aos-easing="ease-in-out"
+    >
+      <nav className=" mob:min-h-max z-50 w-full px-5">
         <div className="flex justify-center items-center w-full min-h-[134px] mob:min-h-max">
           <div className=" max-w-[1236.5px] mob:min-h-max w-full flex flex-wrap items-center justify-between mx-auto py-4">
             <div className="flex justify-between w-full pb-4 items-center">

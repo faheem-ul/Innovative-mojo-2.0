@@ -6,7 +6,13 @@ const MojoMinuteHero = () => {
   return (
     <div className="w-full h-full mt-[76px] px-5">
       <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-[1236px]">
+        <div
+          className="w-full max-w-[1236px]"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+        >
           <Text as="h1">
             Mojo <span className="text-gold">Minute</span>
           </Text>

@@ -23,8 +23,18 @@ const ServiceReusable: React.FC<props> = ({
         "w-full flex justify-between  flex-wrap navsize:justify-center navsize:gap-[50px] items-center",
         classname
       )}
+      // data-aos="fade-up"
+      // data-aos-delay="200"
+      // data-aos-duration="1000"
+      // data-aos-easing="ease-in-out"
     >
-      <div className="overflow-hidden p-[3px] relative rounded-[20px] bg-[#181818]">
+      <div
+        className="overflow-hidden p-[3px] relative rounded-[20px] bg-[#181818]"
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
         <div className="glow inset-0 w-[400px] rounded-[20px] h-[400px] absolute rotate-45"></div>
         <div className="w-[611px] rounded-[16px] bg-[#181818] z-10 relative">
           <Image
@@ -42,7 +52,13 @@ const ServiceReusable: React.FC<props> = ({
       />
       </div> */}
 
-      <div className="max-w-[504px]">
+      <div
+        className="max-w-[504px]"
+        data-aos="fade-down"
+        data-aos-delay="200"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
         <Text className="text-gold text-[25px] mob:text-[32px] font-semibold mb-[18px] text-center">
           {title}
         </Text>
