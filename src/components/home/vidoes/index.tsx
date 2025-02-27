@@ -31,11 +31,10 @@ const HomeVideos = () => {
         scale: 1,
         y: 0,
         duration: 1,
-        ease: "power3.inOut",
+        ease: "power3.out",
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 80%",
-
           toggleActions: "play none none reverse",
         },
       }
@@ -57,53 +56,85 @@ const HomeVideos = () => {
       clone.style.width = `${rect.width}px`;
       clone.style.height = `${rect.height}px`;
       clone.style.objectFit = "cover";
-      clone.style.animationDuration = "500";
       clone.style.zIndex = "100";
+      clone.style.opacity = "0"; // Set opacity 0 initially
       document.body.appendChild(clone);
       cloneRef.current = clone;
-      gsap.to(clone, {
-        top: "50%",
-        left: "50%",
-        // width: "500px",
-        // height: "375px",
-        transform: "translate(-50%, -50%)",
-        duration: 0.5,
-        ease: "power3.inOut",
-      });
-      gsap.to(".lightbox-overlay", {
-        opacity: 1,
-        pointerEvents: "auto",
-        duration: 0.5,
-      });
+
+      // ✅ Ensure background exists before animation starts
+      gsap.set(".lightbox-overlay", { opacity: 0, display: "block" });
+
+      // 🎯 Timeline for synchronized animation with gradual scaling
+      const tl = gsap.timeline();
+      tl.to(
+        ".lightbox-overlay",
+        {
+          opacity: 1,
+          pointerEvents: "auto",
+          duration: 0.8, // Background fades in slowly
+          ease: "power2.out",
+        },
+        0
+      ) // Start immediately
+
+        .to(
+          clone,
+          {
+            top: "50%",
+            left: "50%",
+            scale: 1.4, // Gradually increase scale
+            transform: "translate(-50%, -50%)",
+            opacity: 1,
+            duration: 1, // Slower animation for a smooth effect
+            ease: "power3.out",
+          },
+          0
+        ); // Sync both animations
     }, 10);
   };
 
   const closeLightbox = () => {
     if (cloneRef.current && originalRect.current) {
-      gsap.to(cloneRef.current, {
-        duration: 0.5,
-        ease: "power3.inOut",
-        left: originalRect.current.left,
-        top: originalRect.current.top,
-        width: originalRect.current.width,
-        height: originalRect.current.height,
-        opacity: 0,
+      gsap
+        .timeline()
+        .to(
+          cloneRef.current,
+          {
+            left: originalRect.current.left,
+            top: originalRect.current.top,
+            scale: 1,
+            opacity: 0,
+            duration: 0.8, // Smooth return animation
+            ease: "power3.inOut",
+            onComplete: () => {
+              cloneRef.current?.remove();
+              setSelectedImage(null);
+            },
+          },
+          0
+        )
 
-        onCompleted: () => {
-          cloneRef.current?.remove();
-          setSelectedImage(null);
-        },
-      });
-      gsap.to(".lightbox-overlay", {
-        opacity: 0,
-        pointerEvents: "none",
-        duration: 0.5,
-      });
+        .to(
+          ".lightbox-overlay",
+          {
+            opacity: 0,
+            pointerEvents: "none",
+            duration: 0.6, // Smooth fade-out
+            ease: "power2.in",
+            onComplete: () => {
+              gsap.set(".lightbox-overlay", { display: "none" });
+            },
+          },
+          0
+        );
     }
   };
 
   return (
-    <div className="w-full h-full mt-[122px] xl:px-5 mb-[127px] mob:mb-[66px]">
+    <div
+      ref={containerRef}
+      className="w-full h-full mt-[122px] xl:px-5 mb-[127px] mob:mb-[66px]"
+    >
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full max-w-[1236px]">
           <div className="w-full flex justify-between 2xl:justify-center gap-[22px] flex-wrap">
@@ -147,7 +178,7 @@ const HomeVideos = () => {
       </div>
       {selectedImage && (
         <div
-          className="lightbox-overlay fixed inset-0 top-0 left-0 w-full h-full z-50 bg-black bg-opacity-80"
+          className="lightbox-overlay fixed inset-0 top-0 left-0 w-full h-full z-50 bg-black bg-opacity-80 opacity-0"
           onClick={closeLightbox}
         />
       )}
