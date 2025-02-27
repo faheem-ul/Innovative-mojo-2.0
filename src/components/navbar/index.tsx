@@ -53,13 +53,7 @@ const Navbar = () => {
   //   };
 
   return (
-    <div
-      className="relative"
-      data-aos="fade-up"
-      data-aos-delay="200"
-      data-aos-duration="800"
-      data-aos-easing="ease-in-out"
-    >
+    <div className="relative">
       <nav className=" mob:min-h-max z-50 w-full px-5">
         <div className="flex justify-center items-center w-full min-h-[134px] mob:min-h-max">
           <div className=" max-w-[1236.5px] mob:min-h-max w-full flex flex-wrap items-center justify-between mx-auto py-4">
@@ -74,6 +68,10 @@ const Navbar = () => {
                   width={380}
                   height={170}
                   className="w-[71%] mob:w-[98%]"
+                  data-aos="fade-down"
+                  data-aos-delay="200"
+                  data-aos-duration="800"
+                  data-aos-easing="ease-in-out"
                 />
               </Link>
               <div className="flex xl:pr-4 xl:hidden  pt-4">
@@ -107,6 +105,10 @@ const Navbar = () => {
                     isOpen ? "block" : "hidden"
                   } w-full md:block md:w-auto`}
                   id="navbar-default"
+                  data-aos="fade-down"
+                  data-aos-delay="200"
+                  data-aos-duration="800"
+                  data-aos-easing="ease-in-out"
                 >
                   <div className="flex gap-[116px]">
                     {/* Your menu options */}
