@@ -87,3 +87,7 @@ body {
 .image-rotate {
   transform: rotateX(18deg);
 }
+.home-page-swiper-container {
+  border-radius: 9999px !important;
+  overflow: hidden;
+}
