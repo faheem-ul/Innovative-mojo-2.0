@@ -14,28 +14,29 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HomeHero = () => {
   const imageRef = useRef(null);
-  const wrapperRef = useRef(null); // Parent container for perspective
+  const wrapperRef = useRef(null);
 
   useEffect(() => {
     if (imageRef.current && wrapperRef.current) {
-      gsap.set(wrapperRef.current, { perspective: 1200 }); // Set perspective on parent
+      gsap.set(wrapperRef.current, { perspective: 1200 });
 
       gsap.fromTo(
         imageRef.current,
         {
-          rotateX: 18,
-          // opacity: 0.8,
+          rotateX: 20,
+          scale: 1.02,
         },
         {
-          rotateX: 0, // End tilt
-          opacity: 1,
-          duration: 1.5,
+          rotateX: 0,
+          scale: 1,
+          duration: 1,
           ease: "power2.out",
           scrollTrigger: {
             trigger: imageRef.current,
-            start: "top center",
-            end: "center center",
+            start: "top 70%",
+            end: "center 80%",
             scrub: true,
+            // markers: true,
           },
         }
       );
