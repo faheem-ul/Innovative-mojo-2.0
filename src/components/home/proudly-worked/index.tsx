@@ -18,7 +18,7 @@ const HomeProudly = () => {
     <div className="w-full h-full mt-[174px] mob:mt-[60px] px-5">
       <div className="w-full h-full flex justify-center items-center">
         <div
-          className="w-full max-w-[992px]"
+          className="w-full max-w-[1108px]"
           data-aos="fade-up"
           data-aos-delay="200"
           data-aos-duration="1000"
@@ -33,7 +33,7 @@ const HomeProudly = () => {
                 key={index}
                 src={partner}
                 alt=""
-                className="mob:w-full max-w-[122px]"
+                className="mob:w-full max-w-[276px]"
               />
             ))}
             {/* <Image

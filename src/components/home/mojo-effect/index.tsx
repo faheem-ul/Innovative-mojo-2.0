@@ -15,7 +15,7 @@ const MojoEffect = () => {
         <div className="w-full max-w-[1236px]">
           <Text as="h2" className="text-center mt-[40px] mb-[128px]">
             The <span className="text-gold">MOJO Effect</span> Isn&apos;t Just A
-            Transaction It&apos;s A Transformation
+            Transaction <br /> It&apos;s A Transformation
           </Text>
           <div className="w-full pb-[62px] flex justify-between items-center flex-wrap mob:flex-col mob:gap-[70px] xl:gap-[70px] xl:justify-center">
             <Image
