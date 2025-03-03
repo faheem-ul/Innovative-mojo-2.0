@@ -18,10 +18,10 @@ const AboutHero = () => {
           <Text className="mb-[195px] w-full max-w-[875px] mt-[25px] mob:mb-[96px]">
             At Innovative MOJO, we harness the power of AI-driven marketing,
             SEO, and brand storytelling to create dynamic, data-driven
-            strategies that elevate your brand. Just like the perfect fusion of
-            art and intelligence, our approach blends AI precision with human
-            creativity, driving smarter campaigns, deeper engagement, and faster
-            growth.
+            strategies that elevate your brand. <br /> Just like the perfect
+            fusion of art and intelligence, our approach blends AI precision
+            with human creativity, driving smarter campaigns, deeper engagement,
+            and faster growth.
           </Text>
         </div>
       </div>

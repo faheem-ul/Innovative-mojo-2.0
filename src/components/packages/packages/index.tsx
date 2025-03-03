@@ -64,7 +64,7 @@ const Packages = () => {
           />
           <ReusablePackage
             heading="MOJO Fusion"
-            description="A dynamic 45-60 second commercial here to boost your brand’s visibility and connect with your audience on social media."
+            description="Combining the power of storytelling with SEO expertise."
             icon={fusion}
             bonusBullets={MojoFusionBullets}
             bonusText="Bonus: Free premium website"
