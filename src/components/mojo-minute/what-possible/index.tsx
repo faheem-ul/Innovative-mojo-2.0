@@ -49,7 +49,7 @@ const MojoMinuteWhatPossible = () => {
                 as="h3"
                 className="mt-[20px] text-[25px] text-gold text-center"
               >
-                Select Healing
+                Compilation of work
               </Text>
             </div>
             <div>
@@ -64,7 +64,7 @@ const MojoMinuteWhatPossible = () => {
                 as="h3"
                 className="mt-[20px] text-[25px] text-gold text-center"
               >
-                Select Healing
+                Intel
               </Text>
             </div>
           </div>

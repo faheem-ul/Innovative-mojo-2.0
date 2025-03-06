@@ -11,7 +11,7 @@ const MojoMinuteBonusBullets = [
   "Professional Videography: 1 fully produced and edited video (45-60 seconds each).",
   "Scriptwriting: Engaging scripts crafted to resonate with your audience.",
   "Motion Graphics: Custom animations to enhance your brand message.",
-  "Dedicated Project Manager: Personalized attention to ensure your vision comes to life",
+  "Dedicated Project Manager: Personalized attention to ensure your vision comes to life.",
   "Ideal For: Brands looking to make a powerful, lasting impression through high-quality video content.",
 ];
 
