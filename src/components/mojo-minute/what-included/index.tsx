@@ -9,6 +9,7 @@ import vision from "@/public/images/mojo-minute/vision.svg";
 import filimg from "@/public/images/mojo-minute/filimg.svg";
 import final from "@/public/images/mojo-minute/final.svg";
 import additional from "@/public/images/mojo-minute/additional.svg";
+import postprod from "@/public/images/mojo-minute/FileVideo.svg";
 
 import ReusableCard from "./ReusableCard";
 
@@ -89,7 +90,7 @@ const MojoWhatIncluded = () => {
             />
             <ReusableCard
               heading="Post-Production & Editing"
-              icon={filimg}
+              icon={postprod}
               description={postProductionBullets}
               duration="1600"
             />
