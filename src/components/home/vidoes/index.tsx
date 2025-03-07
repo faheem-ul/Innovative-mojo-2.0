@@ -180,13 +180,13 @@ const HomeVideos = () => {
             <Image
               src={videoimage4}
               alt=""
-              className="w-full max-w-[580px] 2xl:h-[400px] mob:h-full mob:max-w-full video-image transition-transform duration-1000"
+              className="w-full max-w-[580px] mob:h-full mob:max-w-full video-image transition-transform duration-1000"
               onClick={(e) => openLightbox(videoPath4, e)}
             />
             <Image
               src={videoimage5}
               alt=""
-              className="w-full max-w-[620px] 2xl:h-[400px] mob:h-full mob:max-w-full video-image transition-transform duration-1000"
+              className="w-full max-w-[620px] mob:h-full mob:max-w-full video-image transition-transform duration-1000"
               onClick={(e) => openLightbox(videoPath5, e)}
             />
           </div>

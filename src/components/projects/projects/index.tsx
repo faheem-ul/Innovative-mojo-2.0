@@ -65,13 +65,13 @@ const Projects = () => {
                 image={bulkbrothers}
                 className="w-full max-w-[294px] mob:max-w-full"
                 overlayText="Bulk Brothers"
-                buttonHref="/https://bulkbrothersmove.com/"
+                buttonHref="https://bulkbrothersmove.com/"
               />
               <ReusableProject
                 image={eee}
                 className="w-full max-w-[294px] mob:max-w-full"
                 overlayText="EEE"
-                buttonHref="/https://www.eeecorpgroup.com/"
+                buttonHref="https://www.eeecorpgroup.com/"
               />
             </div>
             <ReusableProject
@@ -92,7 +92,7 @@ const Projects = () => {
               image={davidBacksmith}
               className="w-full max-w-[604px]"
               overlayText=" David Starbuck Smith"
-              buttonHref="/https://davidstarbucksmith.com/"
+              buttonHref="https://davidstarbucksmith.com/"
             />
             <div className="xl:w-full justify-center gap-[12px] flex xl:justify-center xl:gap-[20px] mob:flex-col">
               <ReusableProject

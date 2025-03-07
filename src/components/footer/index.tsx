@@ -77,17 +77,20 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/" className="text-[16px] font-poppins">
+              <a href="/help-center" className="text-[16px] font-poppins">
                 Help center
               </a>
             </li>
             <li>
-              <a href="/" className="text-[16px] font-poppins">
+              <a href="/privacy-policy" className="text-[16px] font-poppins">
                 Privacy policy
               </a>
             </li>
             <li>
-              <a href="/" className="text-[16px] font-poppins">
+              <a
+                href="/terms-and-conditions"
+                className="text-[16px] font-poppins"
+              >
                 Terms and conditions
               </a>
             </li>
