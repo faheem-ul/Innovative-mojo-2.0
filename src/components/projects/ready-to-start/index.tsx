@@ -2,13 +2,21 @@ import React from "react";
 import Image from "next/image";
 
 import Text from "@/components/ui/Text";
+import { cn } from "@/lib/utils";
 import LinkButton from "@/components/ui/LinkButton";
 
 import vector from "@/public/images/projects/Vector.svg";
-const ReadytoStart = () => {
+
+interface props {
+  classname?: string;
+}
+const ReadytoStart: React.FC<props> = ({ classname }) => {
   return (
     <div
-      className="w-full h-full px-5 mt-[261px] mb-[163px] mob:mt-[90px]"
+      className={cn(
+        "w-full h-full px-5 mt-[261px] mb-[163px] mob:mt-[90px]",
+        classname
+      )}
       data-aos="fade-up"
       data-aos-delay="200"
       data-aos-duration="1000"
