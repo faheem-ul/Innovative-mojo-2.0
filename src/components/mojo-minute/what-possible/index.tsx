@@ -2,12 +2,17 @@ import React from "react";
 import Image from "next/image";
 
 import Text from "@/components/ui/Text";
+import { cn } from "@/lib/utils";
 
 import selectheal from "@/public/images/mojo-minute/select-heal.webp";
 import compilation from "@/public/images/mojo-minute/compilation.webp";
 import intel from "@/public/images/mojo-minute/intel.webp";
 
-const MojoMinuteWhatPossible = () => {
+interface props {
+  classname?: string;
+}
+
+const MojoMinuteWhatPossible: React.FC<props> = ({ classname }) => {
   return (
     <div className="w-full h-full mt-[76px] px-5">
       <div className="w-full h-full flex justify-center items-center">
@@ -21,7 +26,12 @@ const MojoMinuteWhatPossible = () => {
           <Text as="h2" className="mb-[60px] text-center">
             See What&apos;s <span className="text-gold">Possible</span>
           </Text>
-          <div className="flex mb-[170px] mob:mb-[40px] justify-between navsize:flex-col navsize:items-center navsize:justify-center navsize:gap-[30px]">
+          <div
+            className={cn(
+              "flex mb-[170px] mob:mb-[40px] justify-between navsize:flex-col navsize:items-center navsize:justify-center navsize:gap-[30px]",
+              classname
+            )}
+          >
             <div>
               <Image
                 src={selectheal}

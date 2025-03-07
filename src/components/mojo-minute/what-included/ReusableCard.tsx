@@ -42,14 +42,25 @@ const ReusableCard: React.FC<props> = ({
           {heading}
         </Text>
 
-        {description.map((description, index) => (
-          <ul
-            key={index}
-            className="text-[14px] mb-[19px] font-poppins pl-6 list-disc text-white"
-          >
-            <li>{description}</li>
-          </ul>
-        ))}
+        <ul className="text-[14px] font-poppins pl-6 list-disc text-white">
+          {description.map((item, index) => {
+            if (item.includes(":")) {
+              const [boldText, normalText] = item
+                .split(/:(.*)/)
+                .filter(Boolean); // split into two parts only if the string : in it
+              return (
+                <li key={index} className="mb-[19px]">
+                  <strong>{boldText}:</strong> {normalText}
+                </li>
+              );
+            }
+            return (
+              <li key={index} className="mb-[19px]">
+                {item}
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

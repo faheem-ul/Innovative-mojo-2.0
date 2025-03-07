@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-// import Link from "next/link";
-
 import { projectsData } from "@/lib/projectsData";
-import ProjectDisplayProcessCard from "./ProjectDisplayProcessCard";
 import Text from "@/components/ui/Text";
+
+import ReadytoStart from "../projects/ready-to-start";
+import ProjectDisplayProcessCard from "./ProjectDisplayProcessCard";
 
 interface ProjectPageProps {
   params: { projectId: string };
@@ -71,7 +71,9 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
           {/* Process Section */}
 
           {/* Process Cards */}
-          <ProjectDisplayProcessCard />
+          {project.cardsContent && project.cardsContent.length > 0 && (
+            <ProjectDisplayProcessCard cardsContent={project.cardsContent} />
+          )}
           {/* Process Cards */}
 
           {/* results */}
@@ -93,7 +95,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
                   className="mb-[20px] border border-transparent hover:border-gold hover:text-gold group rounded-[16px] hover:p-4 duration-700"
                   key={index}
                 >
-                  <Text className=" group-hover:text-gold">{result}</Text>
+                  <Text className="group-hover:text-gold">{result}</Text>
                 </div>
               ))}
             </div>
@@ -129,7 +131,20 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
                   </span>
                 ))}
             </Text>
+
+            {project.testimonioalImage && (
+              <Image
+                src={project.testimonioalImage}
+                alt="image"
+                className="w-full max-w-[813px] mt-[66px] mx-auto"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                data-aos-duration="1400"
+                data-aos-easing="ease-in-out"
+              />
+            )}
           </div>
+          <ReadytoStart classname="mt-[74px]" />
 
           {/* Testimonials */}
         </div>

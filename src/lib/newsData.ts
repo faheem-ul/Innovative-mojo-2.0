@@ -5,40 +5,8 @@ import thumbnail4 from "@/public/images/news/thumbnail4.png";
 import thumbnail5 from "@/public/images/news/thumbnail5.png";
 import thumbnail6 from "@/public/images/news/thumbnail6.png";
 import thumbnail7 from "@/public/images/news/thumbnail1.png";
-// import thumbnail8 from "@/public/images/news/thumbnail1.png";
-// import thumbnail9 from "@/public/images/news/thumbnail1.png";
-// import thumbnail10 from "@/public/images/news/thumbnail1.png";
-// import thumbnail11 from "@/public/images/news/thumbnail1.png";
-// import thumbnail12 from "@/public/images/news/thumbnail1.png";
-// import thumbnail13 from "@/public/images/news/thumbnail1.png";
-// import thumbnail14 from "@/public/images/news/thumbnail1.png";
-// import thumbnail15 from "@/public/images/news/thumbnail1.png";
-// import thumbnail16 from "@/public/images/news/thumbnail1.png";
-// import thumbnail17 from "@/public/images/news/thumbnail1.png";
-// import thumbnail18 from "@/public/images/news/thumbnail1.png";
-// import thumbnail19 from "@/public/images/news/thumbnail1.png";
-// import thumbnail20 from "@/public/images/news/thumbnail1.png";
-// import thumbnail21 from "@/public/images/news/thumbnail1.png";
-// import thumbnail22 from "@/public/images/news/thumbnail1.png";
-// import thumbnail23 from "@/public/images/news/thumbnail1.png";
-// import thumbnail24 from "@/public/images/news/thumbnail1.png";
-// import thumbnail25 from "@/public/images/news/thumbnail1.png";
-// import thumbnail26 from "@/public/images/news/thumbnail1.png";
-// import thumbnail27 from "@/public/images/news/thumbnail1.png";
-// import thumbnail28 from "@/public/images/news/thumbnail1.png";
-// import thumbnail29 from "@/public/images/news/thumbnail1.png";
-// import thumbnail30 from "@/public/images/news/thumbnail1.png";
-// import thumbnail31 from "@/public/images/news/thumbnail1.png";
-// import thumbnail32 from "@/public/images/news/thumbnail1.png";
-// import thumbnail33 from "@/public/images/news/thumbnail1.png";
-// import thumbnail34 from "@/public/images/news/thumbnail1.png";
-// import thumbnail35 from "@/public/images/news/thumbnail1.png";
-// import thumbnail36 from "@/public/images/news/thumbnail1.png";
-// import thumbnail37 from "@/public/images/news/thumbnail1.png";
-// import thumbnail38 from "@/public/images/news/thumbnail1.png";
-// import thumbnail39 from "@/public/images/news/thumbnail1.png";
-// import thumbnail40 from "@/public/images/news/thumbnail1.png";
-// import thumbnail41 from "@/public/images/news/thumbnail1.png";
+
+import news1 from "@/public/images/news/news1display.png";
 
 export const NewsData = [
   {
@@ -46,6 +14,7 @@ export const NewsData = [
     title: "AI in Digital Marketing: Transforming Strategies and Outcomes",
     category: "Revenue Generated",
     thumbnail: thumbnail1,
+    test: news1,
     videoUrl: "Podcast -1.wav",
     description1:
       "Overview of AI in Marketing: The podcast defines AI in marketing, traces its history, and discusses current AI technologies used to personalize marketing, automate tasks, and enhance customer service.",
