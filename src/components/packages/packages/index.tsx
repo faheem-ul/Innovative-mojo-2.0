@@ -52,7 +52,7 @@ const Packages = () => {
             icon={mojominute}
             bonusBullets={MojoMinuteBonusBullets}
             bonusText="Bonus - five engaging 15-second reels to connect with your audience on social media."
-            href="/"
+            href="/mojo-minute"
           />
           <ReusablePackage
             heading="MOJO SEO Mastery"
@@ -60,7 +60,7 @@ const Packages = () => {
             icon={seomastery}
             bonusBullets={MojoSeoMasterBullets}
             // bonusText="Bonus - five engaging 15-second reels to connect with your audience on social media."
-            href="/"
+            href="/seo-mastery"
           />
           <ReusablePackage
             heading="MOJO Fusion"
@@ -68,7 +68,7 @@ const Packages = () => {
             icon={fusion}
             bonusBullets={MojoFusionBullets}
             bonusText="Bonus: Free premium website"
-            href="/"
+            href="/mojo-fusion"
           />
         </div>
       </div>
