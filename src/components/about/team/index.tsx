@@ -2,7 +2,7 @@ import React from "react";
 
 import Text from "@/components/ui/Text";
 
-import TeamSlider from "./Slider";
+// import TeamSlider from "./Slider";
 
 const AboutTeam = () => {
   return (
@@ -15,10 +15,10 @@ const AboutTeam = () => {
         data-aos-easing="ease-in-out"
       >
         <div className="w-full max-w-[1236px]">
-          <Text as="h2" className="mb-[68px]">
+          <Text as="h2" className="mb-[28px]">
             Our <span className="text-gold">Team </span>
           </Text>
-          <TeamSlider />
+          {/* <TeamSlider /> */}
         </div>
       </div>
     </div>

@@ -27,7 +27,7 @@ const HomeProudly = () => {
           <Text as="h2" className="mb-[123px] text-center">
             We have proudly <span className="text-gold">worked </span> with
           </Text>
-          <div className="flex gap-[99px] flex-wrap justify-center items-center mob:gap-[50px]">
+          <div className="flex gap-[99px] flex-wrap justify-center items-center mob:gap-[50px] mob:hidden">
             {partners.map((partner, index) => (
               <Image
                 key={index}
@@ -36,21 +36,23 @@ const HomeProudly = () => {
                 className="mob:w-full max-w-[276px]"
               />
             ))}
-            {/* <Image
-              src="/images/home/partner-logos/amazon.png"
-              alt=""
-              className="w-[100px] h-[50px]"
-            />
-            <Image
-              src="/images/home/partner-logos/google.png"
-              alt=""
-              className="w-[100px] h-[50px]"
-            />
-            <Image
-              src="/images/home/partner-logos/microsoft.png"
-              alt=""
-              className="w-[100px] h-[50px]"
-            /> */}
+          </div>
+          <div className="mob:flex hidden w-full justify-between px-[40px]">
+            <Image src={google} alt="gogle" className="w-full max-w-[120px]" />
+            <Image src={intel} alt="gogle" className="w-full max-w-[120px]" />
+          </div>
+          <Image
+            src={tennese}
+            className="w-full max-w-[276px] hidden mob:flex justify-center items-center mx-auto mt-[48px]"
+            alt="image"
+          />
+          <div className="mob:flex hidden w-full justify-between px-[40px] mt-[48px]">
+            <Image src={foodie} alt="gogle" className="w-full max-w-[130px]" />
+            <Image src={ivry} alt="gogle" className="w-full max-w-[130px]" />
+          </div>
+          <div className="mob:flex hidden w-full justify-between px-[40px] mt-[48px]">
+            <Image src={bulldog} alt="gogle" className="w-full max-w-[130px]" />
+            <Image src={eee} alt="gogle" className="w-full max-w-[130px]" />
           </div>
         </div>
       </div>

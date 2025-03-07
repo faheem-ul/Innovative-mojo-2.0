@@ -289,13 +289,13 @@ const Navbar = () => {
                       </li>
                     </ul>
                     <div className=" xl:hidden">
-                      <div className="relative group inline-block">
-                        <Link href="/booking">
+                      <a href="/booking">
+                        <div className="relative group inline-block">
                           <Button className="w-[207px] h-[58px]">
                             Let&apos;s work together
                           </Button>
-                        </Link>
-                      </div>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -453,8 +453,8 @@ const Navbar = () => {
                         <a
                           href="/packages"
                           className={cn(
-                            "block text-[18px] font-poppins font-medium leading-[25.5px]",
-                            currentPathname === "/packages" || "/mojo-minute"
+                            "block text-[18px] font-poppins font-medium leading-[25.5px] text-primary",
+                            currentPathname === "/packages"
                               ? "text-[#BA7802]"
                               : "text-primary"
                           )}
@@ -465,7 +465,7 @@ const Navbar = () => {
                         </a>
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
                         <a
-                          href="/contact-us"
+                          href="/services"
                           className={cn(
                             "block text-[18px] font-poppins font-medium leading-[25.5px] text-primary",
                             currentPathname === "/services"
@@ -478,6 +478,20 @@ const Navbar = () => {
                           </li>
                         </a>
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        <a
+                          href="/news"
+                          className={cn(
+                            "block text-[18px] font-poppins font-medium leading-[25.5px] text-primary",
+                            currentPathname === "/news"
+                              ? "text-[#BA7802]"
+                              : "text-primary"
+                          )}
+                        >
+                          <li className="flex justify-center py-[15px] list-items">
+                            News
+                          </li>
+                        </a>
+                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
                         <li
                           className={cn(
                             "flex justify-center font-poppins py-[15px] list-items gap-2 items-center"
@@ -485,13 +499,18 @@ const Navbar = () => {
                           )}
                           //   onClick={handleBooknowToggle}
                         >
-                          <Link
+                          <a
                             href="/booking"
-                            className="text-[18px] font-medium text-white text-center"
+                            className={cn(
+                              "text-[18px] font-medium text-white text-center",
+                              currentPathname === "/booking"
+                                ? "text-[#BA7802]"
+                                : "text-primary"
+                            )}
                             onClick={(e) => e.stopPropagation()}
                           >
                             Let&apos;s work together
-                          </Link>
+                          </a>
                           {/* <FaChevronDown
                             className={`text-white transform transition-transform duration-300 text-[18px] ${
                               ServicesToggle ? "rotate-180" : "rotate-0"
