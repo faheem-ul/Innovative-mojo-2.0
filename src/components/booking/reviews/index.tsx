@@ -10,7 +10,7 @@ import ReviewsSwiperComponent from "./SwiperReviews";
 
 const BookingReviews = () => {
   return (
-    <div className="w-full h-full my-[100px] mob:my-[50px] px-5 overflow-hidden">
+    <div className="w-full h-full mt-[100px] mob:my-[50px] px-5 overflow-hidden mojoeffect-gradient mob:mb-0">
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full max-w-[1236px]">
           <Text as="h2" className="text-center mt-[40px] mb-[128px]">

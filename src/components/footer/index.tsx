@@ -9,8 +9,8 @@ import { cn } from "@/lib/utils";
 import Text from "../ui/Text";
 
 import logo from "@/public/logo.svg";
-import instagram from "@/public/images/footer/instagram.svg";
-import facebook from "@/public/images/footer/facebook.svg";
+// import instagram from "@/public/images/footer/instagram.svg";
+// import facebook from "@/public/images/footer/facebook.svg";
 import linkedin from "@/public/images/footer/linkedin.svg";
 import footerBg from "@/public/images/footer/footerbg.png";
 
@@ -33,7 +33,9 @@ const Footer = () => {
           quality={100}
           className={cn(
             "",
-            currentpathname === "/packages" ? "mojoeffect-gradient" : ""
+            currentpathname === "/packages" || currentpathname === "/booking"
+              ? "mojoeffect-gradient"
+              : ""
           )}
         />
       </div>
@@ -124,12 +126,12 @@ const Footer = () => {
             </ul>
             {/* Social Media Icons */}
             <div className="flex gap-6 mt-[20px]">
-              <Link href="#">
+              {/* <Link href="#">
                 <Image src={facebook} alt="Facebook" width={30} height={30} />
               </Link>
               <Link href="#">
                 <Image src={instagram} alt="Instagram" width={30} height={30} />
-              </Link>
+              </Link> */}
               <Link href="#">
                 <Image src={linkedin} alt="LinkedIn" width={30} height={30} />
               </Link>

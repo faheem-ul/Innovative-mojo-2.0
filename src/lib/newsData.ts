@@ -118,7 +118,7 @@ export const NewsData = [
     id: 9,
     title: "The Power of Storytelling in Videography",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail2,
     videoUrl: "Podcast-9.wav",
     description1:
       "Importance of Storytelling: Storytelling transforms ordinary videos into compelling narratives that captivate audiences.",
@@ -131,7 +131,7 @@ export const NewsData = [
     id: 10,
     title: "Local SEO and Voice Search Optimization",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail3,
     videoUrl: "Podcast-10.wav",
     description1:
       "Importance of Local SEO and Voice Search: Optimizing for local SEO and voice search is crucial for businesses targeting specific geographic areas. This helps them rank higher in local search results and capture local voice search traffic.",
@@ -144,7 +144,7 @@ export const NewsData = [
     id: 11,
     title: "Personalizing User Experience with AI",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail4,
     videoUrl: "Podcast-11.wav",
     description1:
       "Personalization through AI: AI transforms online marketing by shifting from generic messages to personalized experiences, enhancing user engagement and sales through targeted ads and dynamic content based on user behavior and preferences.",
@@ -157,7 +157,7 @@ export const NewsData = [
     id: 12,
     title: "The Power of Video Content",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail5,
     videoUrl: "Podcast-12.wav",
     description1:
       "Engaging Video Content: The resource emphasizes the creation of engaging video content, highlighting techniques and ideas to captivate the audience.",
@@ -171,7 +171,7 @@ export const NewsData = [
     id: 13,
     title: "Innovative Web Design Trends",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail6,
     videoUrl: "Podcast-13.wav",
     description1:
       "Current Trends: The program explores the latest trends in web design, including the impact of the metaverse.",
@@ -184,7 +184,7 @@ export const NewsData = [
     id: 14,
     title: "Sustainable Tech Innovations",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail7,
     videoUrl: "Podcast-14.wav",
     description1:
       "Exploration of Sustainable Tech: The program will delve into how technology is promoting sustainability across various industries, with a focus on eco-friendly web design.",
@@ -211,7 +211,7 @@ export const NewsData = [
     id: 16,
     title: "Tech and the Environment",
     category: "Revenue Generated",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail2,
     videoUrl: "Podcast-16.wav",
     description1:
       "Exploration of Technology and Environmental Sustainability: The episode will discuss how various technologies are aiding in reducing environmental impact, focusing on carbon footprint reduction, water conservation, and pollution control.",
@@ -224,7 +224,7 @@ export const NewsData = [
     id: 17,
     title: "Harnessing the Power of React for Dynamic User Interfaces",
     category: "Revenue Generated",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail3,
     videoUrl: "Podcast-17.wav",
     description1:
       "Component-Based Architecture: React’s component-based structure allows developers to create reusable UI components, making development more efficient and scalable.",
@@ -237,7 +237,7 @@ export const NewsData = [
     id: 18,
     title: "Boosting Your Online Presence with Effective SEO Strategies",
     category: "Revenue Generated",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail4,
     videoUrl: "Podcast-18.wav",
     description1:
       "Importance of SEO: Enhances website visibility and attracts organic traffic.",
@@ -250,7 +250,7 @@ export const NewsData = [
     id: 19,
     title: "Mastering the Art of Videography",
     category: "Revenue Generated",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail5,
     videoUrl: "Podcast-19.wav",
     description1:
       "Comprehensive Approach: The text emphasizes a holistic approach to videography, combining technical skills with storytelling to create engaging visual narratives.",
@@ -263,7 +263,7 @@ export const NewsData = [
     id: 20,
     title: "Using Motion Graphics to Enhance Website SEO",
     category: "Revenue Generated",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail6,
     videoUrl: "Podcast-20.wav",
     description1:
       "Engagement and Visual Appeal: Motion graphics make websites more engaging and visually appealing, which can enhance user experience and retention.",
@@ -276,7 +276,7 @@ export const NewsData = [
     id: 21,
     title: "The Fundamentals of Scriptwriting for Web Videos",
     category: "Revenue Generated",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail7,
     videoUrl: "Podcast-21.wav",
     description1:
       "Importance of Well-Written Scripts: Emphasizes the need for well-crafted scripts to create engaging and SEO-effective web videos.",
@@ -302,7 +302,7 @@ export const NewsData = [
     id: 23,
     title: "Creating Engaging Video Content for SEO",
     category: "Revenue Generated",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail2,
     videoUrl: "Podcast-23.wav",
     description1:
       "Understand Your Audience: Tailor your video content to meet the needs and preferences of your target audience to improve engagement and SEO.",
@@ -315,7 +315,7 @@ export const NewsData = [
     id: 24,
     title: "Innovative Content Ideas to Boost Engagement",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail3,
     videoUrl: "Podcast-24.wav",
     description1:
       "Emphasis on Innovation: The guide highlights the importance of incorporating fresh and innovative ideas to create engaging content.",
@@ -328,7 +328,7 @@ export const NewsData = [
     id: 25,
     title: "From Concept to Screen: The Journey of a Video",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail4,
     videoUrl: "Podcast-25.wav",
     description1:
       "Comprehensive Video Creation Process: The podcast series “Innovative Mojo” covers every stage of video production, from brainstorming and concept development to editing, distribution, and marketing.",
@@ -341,7 +341,7 @@ export const NewsData = [
     id: 26,
     title: "How to Use Google Analytics for Traffic Improvement Insights",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail5,
     videoUrl: "Podcast-26.wav",
     description1:
       "Setting Up and Tracking: The guide explains how to set up a Google Analytics account and install the tracking code on your website to start collecting data.",
@@ -354,7 +354,7 @@ export const NewsData = [
     id: 27,
     title: "Project Management",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail6,
     videoUrl: "Podcast-27.wav",
     description1:
       "Core Elements of Web Development Project Management: The guide emphasizes essential aspects such as planning, team collaboration, time management, and quality assurance.",
@@ -368,7 +368,7 @@ export const NewsData = [
     id: 28,
     title: "The Power of Organic Search",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail7,
     videoUrl: "Podcast-28.wav",
     description1:
       "Keyword Research: Identifying and using relevant keywords to attract potential customers.",
@@ -394,7 +394,7 @@ export const NewsData = [
     id: 30,
     title: "The Role of Content Strategy in Organic Search",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail2,
     videoUrl: "Podcast-30.wav",
     description1:
       "Set Clear, Measurable Goals: Establish specific objectives for your content to track progress effectively.",
@@ -407,7 +407,7 @@ export const NewsData = [
     id: 31,
     title: "The Future of Digital Marketing: Trends to Watch",
     category: "Revenue Generated",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail3,
     videoUrl: "Podcast-31.wav",
     description1:
       "Emerging Technologies: The impact of AI and automation is transforming digital marketing strategies.",
@@ -420,7 +420,7 @@ export const NewsData = [
     id: 32,
     title: "Concept Development in Videography",
     category: "Revenue Generated",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail4,
     videoUrl: "Podcast-32.wav",
     description1:
       "Brainstorming Techniques: Utilize various brainstorming methods to generate creative video concepts that align with the client’s brand story.",
@@ -433,7 +433,7 @@ export const NewsData = [
     id: 33,
     title: "Maximizing ROI with Effective Content Strategies",
     category: "Revenue Generated",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail5,
     videoUrl: "Podcast-33.wav",
     description1:
       "Platform Selection: Choose the right social media platforms that align with your business’s target audience.",
@@ -446,7 +446,7 @@ export const NewsData = [
     id: 34,
     title: "Innovative Approaches to Customer Engagement",
     category: "Revenue Generated",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail6,
     videoUrl: "Podcast-34.wav",
     description1:
       "Interactive Content: Use quizzes, polls, and other interactive content to engage customers.",
@@ -459,7 +459,7 @@ export const NewsData = [
     id: 35,
     title: "The Art of Storytelling in Marketing",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail7,
     videoUrl: "Podcast-35.wav",
     description1:
       "Power of Storytelling: Crafting compelling narratives helps businesses connect with audiences and build brand loyalty.",
@@ -485,7 +485,7 @@ export const NewsData = [
     id: 37,
     title: "Creating a User Centric Website",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail2,
     videoUrl: "Podcast-37.wav",
     description1:
       "Understand Your Audience: Conduct thorough user research to identify the needs and preferences of your target audience.",
@@ -498,7 +498,7 @@ export const NewsData = [
     id: 38,
     title: "The Role of AI in Digital Marketing",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail3,
     videoUrl: "Podcast-38.wav",
     description1:
       "Personalization of Marketing Experiences: AI-powered tools enable businesses to create highly personalized marketing experiences by analyzing customer data and tailoring content to individual preferences and behaviors.",
@@ -512,7 +512,7 @@ export const NewsData = [
     id: 39,
     title: "Leveraging Agile Methodologies in Web Projects",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail4,
     videoUrl: "Podcast-39.wav",
     description1:
       "Introduction to Agile: Explains the basics of Agile methodologies and their benefits in enhancing flexibility and efficiency in web development projects.",
@@ -525,7 +525,7 @@ export const NewsData = [
     id: 40,
     title: "The Role of Scriptwriting in Professional Videography",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail5,
     videoUrl: "Podcast-40.wav",
     description1:
       "Importance of Scriptwriting: A well-crafted script is essential for creating impactful and engaging videos, serving as the foundation for successful videography.",
@@ -538,7 +538,7 @@ export const NewsData = [
     id: 41,
     title: "Creating Scroll Stopping Video Content for Your Brand",
     category: "Revenue Operations",
-    thumbnail: thumbnail1,
+    thumbnail: thumbnail6,
     videoUrl: "Podcast-41.wav",
     description1:
       "Importance of Storytelling: Emphasizes the significance of storytelling in creating compelling narratives that resonate with viewers.",

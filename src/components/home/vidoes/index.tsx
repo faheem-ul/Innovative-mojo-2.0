@@ -19,7 +19,6 @@ const HomeVideos = () => {
   const originalRect = useRef<DOMRect | null>(null);
 
   // Define video paths for each image.
-  // Update these paths to match your video files located in the public/videos folder.
   const videoPath1 =
     "/videos/_Far From Home_ - Shot on the Canon EOS R5 C (1).mp4";
   const videoPath2 = "/videos/intalvideo.mp4";
@@ -50,7 +49,7 @@ const HomeVideos = () => {
     );
   }, []);
 
-  // Updated openLightbox to accept a video source as an argument
+  // Updated openLightbox to handle spacing for mobile and animate dimensions accordingly.
   const openLightbox = (
     videoSrc: string,
     e: React.MouseEvent<HTMLImageElement>
@@ -66,8 +65,7 @@ const HomeVideos = () => {
       clone.autoplay = true;
       clone.controls = true;
       clone.playsInline = true;
-      // Optionally set muted if required (e.g., for autoplay on mobile)
-      // clone.muted = true;
+      // clone.muted = true; // Uncomment if needed for autoplay on mobile
 
       clone.style.position = "fixed";
       clone.classList.add("fixed", "rounded-lg", "shadow-lg");
@@ -84,6 +82,19 @@ const HomeVideos = () => {
       // Ensure the lightbox overlay is visible
       gsap.set(".lightbox-overlay", { opacity: 0, display: "block" });
 
+      // Determine if we're in mobile view (threshold can be adjusted)
+      const isMobile = window.innerWidth < 768;
+      let finalWidth;
+      let finalHeight;
+      if (isMobile) {
+        finalWidth = window.innerWidth - 40; // 20px margin on each side
+        const aspectRatio = rect.width / rect.height;
+        finalHeight = finalWidth / aspectRatio;
+      } else {
+        finalWidth = rect.width * 1.4;
+        finalHeight = rect.height * 1.4;
+      }
+
       const tl = gsap.timeline();
       tl.to(
         ".lightbox-overlay",
@@ -99,7 +110,8 @@ const HomeVideos = () => {
         {
           top: "50%",
           left: "50%",
-          scale: 1.4,
+          width: finalWidth,
+          height: finalHeight,
           transform: "translate(-50%, -50%)",
           opacity: 1,
           duration: 1,
@@ -110,8 +122,13 @@ const HomeVideos = () => {
     }, 10);
   };
 
+  // Updated closeLightbox to pause the video immediately (stopping audio) and animate width/height back.
   const closeLightbox = () => {
     if (cloneRef.current && originalRect.current) {
+      // Pause the video to stop audio immediately
+      cloneRef.current.pause();
+      cloneRef.current.currentTime = 0;
+
       gsap
         .timeline()
         .to(
@@ -119,7 +136,8 @@ const HomeVideos = () => {
           {
             left: originalRect.current.left,
             top: originalRect.current.top,
-            scale: 1,
+            width: originalRect.current.width,
+            height: originalRect.current.height,
             opacity: 0,
             duration: 0.8,
             ease: "power3.inOut",
