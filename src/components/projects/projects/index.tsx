@@ -29,14 +29,14 @@ const Projects = () => {
               image={tactIq}
               className="w-full max-w-[604px]"
               overlayText="TactIQ Website"
-              buttonHref="/"
+              buttonHref="https://wearetactiq.com/"
             />
 
             <ReusableProject
               image={foundation1890}
               className="w-full max-w-[604px]"
               overlayText="1890 Foundation"
-              buttonHref="/"
+              videoUrl="/videos/1890.mp4"
             />
           </div>
           <div
@@ -51,38 +51,38 @@ const Projects = () => {
                 image={tenesse}
                 className="w-full max-w-[294px] mob:max-w-full"
                 overlayText="Tenessee State University"
-                buttonHref="/"
+                videoUrl="/videos/Tennesse state University.mp4"
               />
 
               <ReusableProject
                 image={bulldog}
                 className="w-full max-w-[294px] mob:max-w-full"
                 overlayText="Bulldog"
-                buttonHref="/"
+                buttonHref="/projects/bulldog"
               />
 
               <ReusableProject
                 image={bulkbrothers}
                 className="w-full max-w-[294px] mob:max-w-full"
                 overlayText="Bulk Brothers"
-                buttonHref="/"
+                buttonHref="/https://bulkbrothersmove.com/"
               />
               <ReusableProject
                 image={eee}
                 className="w-full max-w-[294px] mob:max-w-full"
                 overlayText="EEE"
-                buttonHref="/"
+                buttonHref="/https://www.eeecorpgroup.com/"
               />
             </div>
             <ReusableProject
               image={selectHeal}
               className="w-full max-w-[604px] h-full"
               overlayText="Select Healing"
-              buttonHref="/"
+              videoUrl="/videos/select healing.mp4"
             />
           </div>
           <div
-            className="flex justify-between w-full mt-[31px] xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]"
+            className="flex justify-between relative z-[0] w-full mt-[31px] xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]"
             data-aos="fade-down"
             data-aos-delay="200"
             data-aos-duration="1000"
@@ -92,20 +92,20 @@ const Projects = () => {
               image={davidBacksmith}
               className="w-full max-w-[604px]"
               overlayText=" David Starbuck Smith"
-              buttonHref="/"
+              buttonHref="/https://davidstarbucksmith.com/"
             />
             <div className="xl:w-full justify-center gap-[12px] flex xl:justify-center xl:gap-[20px] mob:flex-col">
               <ReusableProject
                 image={iviry}
                 className="w-full max-w-[294px] mob:max-w-full"
                 overlayText="Iviry"
-                buttonHref="/"
+                buttonHref="/projects/iviry"
               />
               <ReusableProject
                 image={foodie}
                 className="w-full max-w-[294px] mob:max-w-full"
                 overlayText="Foodie"
-                buttonHref="/"
+                buttonHref="/projects/foodie"
               />
             </div>
           </div>

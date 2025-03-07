@@ -1,27 +1,24 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Text from "@/components/ui/Text";
 import TypeWriterText from "@/components/ui/TypeWriterText";
 
-import video from "@/public/images/home/hero-video.png";
-
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeHero = () => {
-  const imageRef = useRef(null);
+  const videoRef = useRef(null);
   const wrapperRef = useRef(null);
 
   useEffect(() => {
-    if (imageRef.current && wrapperRef.current) {
+    if (videoRef.current && wrapperRef.current) {
       gsap.set(wrapperRef.current, { perspective: 1200 });
 
       gsap.fromTo(
-        imageRef.current,
+        videoRef.current,
         {
           rotateX: 20,
           scale: 1.02,
@@ -32,7 +29,7 @@ const HomeHero = () => {
           duration: 1,
           ease: "power2.out",
           scrollTrigger: {
-            trigger: imageRef.current,
+            trigger: videoRef.current,
             start: "top 70%",
             end: "center 80%",
             scrub: true,
@@ -82,11 +79,14 @@ const HomeHero = () => {
       >
         <div
           className="relative overflow-hidden transition-all duration-500 z-10 h-auto w-full"
-          ref={imageRef}
+          ref={videoRef}
         >
-          <Image
-            src={video}
-            alt="Animated Hero Video"
+          <video
+            src="/videos/ourteamvid.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full object-cover max-w-[1232px] mx-auto"
             style={{ aspectRatio: "16/9" }}
           />

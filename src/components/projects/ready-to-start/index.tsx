@@ -28,7 +28,7 @@ const ReadytoStart: React.FC<props> = ({ classname }) => {
             Ready to start your <span className="text-gold">project</span>
           </Text>
           <LinkButton
-            href="/"
+            href="/booking"
             className="w-[228px] h-[52px] bg-gold mt-[47px] mb-[70px] mx-auto"
           >
             <div className="flex gap-2">

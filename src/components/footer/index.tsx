@@ -72,7 +72,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/" className="text-[16px] font-poppins">
+              <a href="/news" className="text-[16px] font-poppins">
                 News
               </a>
             </li>

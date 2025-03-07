@@ -10,12 +10,14 @@ interface props {
   title: string;
   description: string;
   classname?: string;
+  href?: string;
 }
 const ServiceReusable: React.FC<props> = ({
   image,
   title,
   description,
   classname,
+  href,
 }) => {
   return (
     <div
@@ -37,11 +39,13 @@ const ServiceReusable: React.FC<props> = ({
       >
         <div className="glow inset-0 w-[400px] rounded-[20px] h-[400px] absolute rotate-45"></div>
         <div className="w-[611px] rounded-[16px] bg-[#181818] z-10 relative">
-          <Image
-            src={image}
-            alt="service icon"
-            className=" relative w-full rounded-[17px] h-full bg-secondary"
-          />
+          <a href={href}>
+            <Image
+              src={image}
+              alt="service icon"
+              className=" relative w-full rounded-[17px] h-full bg-secondary"
+            />
+          </a>
         </div>
       </div>
       {/* <div className="overflow-hidden ">
@@ -59,9 +63,11 @@ const ServiceReusable: React.FC<props> = ({
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
       >
-        <Text className="text-gold text-[25px] mob:text-[32px] font-semibold mb-[18px] text-center">
-          {title}
-        </Text>
+        <a href={href}>
+          <Text className="text-gold text-[25px] mob:text-[32px] font-semibold mb-[18px] text-center">
+            {title}
+          </Text>
+        </a>
         <Text className="text-[16px] text-center">{description}</Text>
       </div>
     </div>
