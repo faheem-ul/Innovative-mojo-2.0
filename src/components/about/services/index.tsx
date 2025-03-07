@@ -5,7 +5,7 @@ import Text from "@/components/ui/Text";
 
 const AboutServices = () => {
   return (
-    <div className="w-full h-full mt-[126px] mob:mt-[70px] px-5">
+    <div className="w-full h-full mt-[26px] mob:mt-[70px] px-5">
       <div className="w-full h-full flex justify-center items-center">
         <div
           className="w-full"

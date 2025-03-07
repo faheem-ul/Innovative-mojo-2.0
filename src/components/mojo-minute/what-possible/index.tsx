@@ -1,6 +1,7 @@
-import React from "react";
-import Image from "next/image";
+"use client";
 
+import React, { useState } from "react";
+import Image from "next/image";
 import Text from "@/components/ui/Text";
 import { cn } from "@/lib/utils";
 
@@ -8,11 +9,26 @@ import selectheal from "@/public/images/mojo-minute/select-heal.webp";
 import compilation from "@/public/images/mojo-minute/compilation.webp";
 import intel from "@/public/images/mojo-minute/intel.webp";
 
+import { IoMdClose } from "react-icons/io";
+
 interface props {
   classname?: string;
 }
 
 const MojoMinuteWhatPossible: React.FC<props> = ({ classname }) => {
+  // Holds the video path to play, or null if no video is open
+  const [openVideo, setOpenVideo] = useState<string | null>(null);
+
+  // Opens the modal with the corresponding video
+  const handleOpenVideo = (videoPath: string) => {
+    setOpenVideo(videoPath);
+  };
+
+  // Closes the modal
+  const handleCloseVideo = () => {
+    setOpenVideo(null);
+  };
+
   return (
     <div className="w-full h-full mt-[76px] px-5">
       <div className="w-full h-full flex justify-center items-center">
@@ -24,7 +40,7 @@ const MojoMinuteWhatPossible: React.FC<props> = ({ classname }) => {
           data-aos-easing="ease-in-out"
         >
           <Text as="h2" className="mb-[60px] text-center">
-            See What&apos;s <span className="text-gold">Possible</span>
+            See&nbsp;What&apos;s <span className="text-gold">Possible</span>
           </Text>
           <div
             className={cn(
@@ -32,12 +48,13 @@ const MojoMinuteWhatPossible: React.FC<props> = ({ classname }) => {
               classname
             )}
           >
-            <div>
+            <div
+              onClick={() => handleOpenVideo("/videos/select healing.mp4")}
+              className="cursor-pointer"
+            >
               <Image
                 src={selectheal}
                 alt="Select Heal"
-                width={396}
-                height={267}
                 className="w-full max-w-[396px]"
               />
               <Text
@@ -47,12 +64,13 @@ const MojoMinuteWhatPossible: React.FC<props> = ({ classname }) => {
                 Select Healing
               </Text>
             </div>
-            <div>
+            <div
+              onClick={() => handleOpenVideo("/videos/ourteamvid.mp4")}
+              className="cursor-pointer"
+            >
               <Image
                 src={compilation}
                 alt="Compilation"
-                width={396}
-                height={267}
                 className="w-full max-w-[396px]"
               />
               <Text
@@ -62,14 +80,11 @@ const MojoMinuteWhatPossible: React.FC<props> = ({ classname }) => {
                 Compilation of work
               </Text>
             </div>
-            <div>
-              <Image
-                src={intel}
-                alt="Intel"
-                width={396}
-                height={267}
-                className="w-full max-w-[396px]"
-              />
+            <div
+              onClick={() => handleOpenVideo("/videos/intalvideo.mp4")}
+              className="cursor-pointer"
+            >
+              <Image src={intel} alt="Intel" className="w-full max-w-[396px]" />
               <Text
                 as="h3"
                 className="mt-[20px] text-[25px] text-gold text-center"
@@ -80,6 +95,41 @@ const MojoMinuteWhatPossible: React.FC<props> = ({ classname }) => {
           </div>
         </div>
       </div>
+
+      {/* Modal Video Player */}
+      {openVideo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 animate-slideDown">
+          <div className="relative max-w-[700px] w-full px-5">
+            {/* Close Icon */}
+            <button
+              onClick={handleCloseVideo}
+              className="absolute top-2 right-2 text-white z-10 mx-5"
+            >
+              <IoMdClose size={30} />
+            </button>
+            <video className="w-full" controls autoPlay>
+              <source src={openVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      )}
+
+      <style jsx>{`
+        .animate-slideDown {
+          animation: slideDown 0.5s ease-out forwards;
+        }
+        @keyframes slideDown {
+          0% {
+            transform: translateY(-50px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      `}</style>
     </div>
   );
 };

@@ -41,9 +41,9 @@ const linkbuildingBullets = [
   "    Social media and local SEO integration to expand your reach and visibility.",
 ];
 const analyticalBullets = [
-  "The final video is delivered in a format optimized for your preferred platforms, including social media, websites, and more.",
-  "We offer guidance on how to maximize the impact of your MOJO Minute across different channels.",
-  "Our team remains available for any follow-up support or additional edits.",
+  "Monthly performance reports with key metrics and insights.",
+  "Analysis of traffic, rankings, and conversion data to measure success.",
+  "Ongoing adjustments based on data-driven results to maximize ROI.",
 ];
 
 const SeoMasteryIncluded = () => {
