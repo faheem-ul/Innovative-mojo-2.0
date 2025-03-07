@@ -4,7 +4,7 @@ import thumbnail3 from "@/public/images/news/thumbnail3.png";
 import thumbnail4 from "@/public/images/news/thumbnail4.png";
 import thumbnail5 from "@/public/images/news/thumbnail5.png";
 import thumbnail6 from "@/public/images/news/thumbnail6.png";
-import thumbnail7 from "@/public/images/news/thumbnail1.png";
+import thumbnail7 from "@/public/images/news/thumbnail7.png";
 
 import news1 from "@/public/images/news/news1display.png";
 

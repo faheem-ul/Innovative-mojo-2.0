@@ -3,11 +3,13 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import Text from "../ui/Text";
+
 import { NewsData } from "@/lib/newsData";
 
 import rightbtn from "@/public/images/news/CaretRight.svg";
 import playbtn from "@/public/images/news/PlayCircle.png";
 import audioplayer from "@/public/images/news/Frame.png";
+import news1 from "@/public/images/news/news1display.png";
 interface NewsPageProps {
   params: { newsId: string };
 }
@@ -57,13 +59,13 @@ const NewsSinglePage: React.FC<NewsPageProps> = ({ params }) => {
             data-aos-easing="ease-in-out"
             className="relative"
           >
-            {news.test && (
-              <Image
-                src={news.test}
-                alt={news.title}
-                className="rounded-[40px] mob:w-full mob:h-[500px] object-cover"
-              />
-            )}
+            {/* {news.test && ( */}
+            <Image
+              src={news1}
+              alt={news.title}
+              className="rounded-[40px] mob:w-full mob:h-[500px] object-cover"
+            />
+            {/* )} */}
             {/* Overlay div */}
             <div className="absolute inset-0 bg-gradient-to-tr from-[#000]/90 to-[#000]/30 rounded-[40px]"></div>
             <div className="absolute inset-0 flex justify-center items-center mob:px-5">

@@ -290,9 +290,11 @@ const Navbar = () => {
                     </ul>
                     <div className=" xl:hidden">
                       <div className="relative group inline-block">
-                        <Button className="w-[207px] h-[58px]">
-                          Let&apos;s work together
-                        </Button>
+                        <Link href="/booking">
+                          <Button className="w-[207px] h-[58px]">
+                            Let&apos;s work together
+                          </Button>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -484,7 +486,7 @@ const Navbar = () => {
                           //   onClick={handleBooknowToggle}
                         >
                           <Link
-                            href="/"
+                            href="/booking"
                             className="text-[18px] font-medium text-white text-center"
                             onClick={(e) => e.stopPropagation()}
                           >

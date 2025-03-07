@@ -91,3 +91,7 @@ body {
   border-radius: 9999px !important;
   overflow: hidden;
 }
+
+.news-hover {
+  background: linear-gradient(180deg, rgba(235, 193, 92, 0.1) 0%, #000000 100%);
+}
