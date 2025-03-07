@@ -2,7 +2,7 @@ import React from "react";
 import Text from "@/components/ui/Text";
 const MojoFusionMinuteGet = () => {
   return (
-    <div className="w-full h-full  px-5">
+    <div className="w-full h-full px-5 mb-[45px]">
       <div className="w-full h-full flex justify-center items-center">
         <div
           className="w-full max-w-[1236px]"
