@@ -95,3 +95,7 @@ body {
 .news-hover {
   background: linear-gradient(180deg, rgba(235, 193, 92, 0.1) 0%, #000000 100%);
 }
+
+html {
+  scroll-behavior: smooth;
+}

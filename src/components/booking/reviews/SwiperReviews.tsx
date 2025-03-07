@@ -29,7 +29,12 @@ const ReviewsSwiperComponent = () => {
       <Swiper
         // slidesPerView={1}
         spaceBetween={30}
-        mousewheel={true}
+        // mousewheel={true}
+        mousewheel={{
+          forceToAxis: true,
+          sensitivity: 2,
+          releaseOnEdges: true,
+        }}
         // loop={true}
         breakpoints={{
           768: {
