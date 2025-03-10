@@ -101,20 +101,20 @@ const Footer = () => {
             {/* Contact Info */}
             <ul className="space-y-[18px] mob:text-left">
               <li>
-                <Link
+                <a
                   href="mailto:sales@innovativemojo.com"
                   className="text-[16px] font-poppins"
                 >
                   sales@innovativemojo.com
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#" className="text-[16px] font-poppins">
+                <Link href="/booking" className="text-[16px] font-poppins">
                   Schedule a meeting
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-[16px] font-poppins">
+                <Link href="/services" className="text-[16px] font-poppins">
                   Work with us
                 </Link>
               </li>
@@ -132,7 +132,7 @@ const Footer = () => {
               <Link href="#">
                 <Image src={instagram} alt="Instagram" width={30} height={30} />
               </Link> */}
-              <Link href="#">
+              <Link href="https://www.linkedin.com/company/innovative-mojo/">
                 <Image src={linkedin} alt="LinkedIn" width={30} height={30} />
               </Link>
             </div>

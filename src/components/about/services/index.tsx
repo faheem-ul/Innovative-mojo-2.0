@@ -15,7 +15,7 @@ const AboutServices = () => {
           data-aos-easing="ease-in-out"
         >
           <MarqueeComponent direction="right">
-            <div className="flex items-center ml-[204px] justify-center gap-[204px]">
+            <div className="flex items-center ml-[204px] justify-center gap-[204px] mob:gap-[70px] mob:ml-[70px]">
               <Text className="text-[30px] mob:text-[28px] font-semibold text-[#F5D06F4D]/30">
                 Marketing
               </Text>
@@ -29,8 +29,11 @@ const AboutServices = () => {
               </Text>
             </div>
           </MarqueeComponent>
-          <MarqueeComponent direction="left" className="mt-[60px]">
-            <div className="flex items-center ml-[204px] justify-center gap-[204px]">
+          <MarqueeComponent
+            direction="left"
+            className="mt-[60px] mob:mt-[40px]"
+          >
+            <div className="flex items-center ml-[204px] justify-center gap-[204px] mob:gap-[70px] mob:ml-[70px]">
               <Text className="text-[30px] mob:text-[28px] font-semibold text-[#F5D06F4D]/30">
                 Product Design
               </Text>
