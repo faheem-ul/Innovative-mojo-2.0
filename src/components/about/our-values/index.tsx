@@ -4,7 +4,7 @@ import Text from "@/components/ui/Text";
 
 const AboutValues = () => {
   return (
-    <div className="w-full h-full px-5 mb-[267px] mob:mb-[96px]">
+    <div className="w-full h-full px-5 mb-[187px] mob:mb-[76px]">
       <div
         className="w-full h-full flex justify-center items-center"
         data-aos="fade-down"

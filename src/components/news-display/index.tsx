@@ -1,33 +1,25 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 import Text from "../ui/Text";
-
 import { NewsData } from "@/lib/newsData";
 
 import rightbtn from "@/public/images/news/CaretRight.svg";
-import playbtn from "@/public/images/news/PlayCircle.png";
-import audioplayer from "@/public/images/news/Frame.png";
 import news1 from "@/public/images/news/news1display.png";
+import AudioPlayerComponent from "./audio-player";
+
 interface NewsPageProps {
   params: { newsId: string };
 }
 
-// Pre-generate static paths based on the news id
-export async function generateStaticParams() {
-  return NewsData.map((newsItem) => ({
-    newsId: String(newsItem.id),
-  }));
-}
-
-// A helper function to render descriptions with bold text before the colon
+// Render bold text before colon
 const renderDescription = (description: string) => {
   const colonIndex = description.indexOf(":");
   if (colonIndex === -1) {
     return <Text>{description}</Text>;
   }
-
   const boldPart = description.substring(0, colonIndex + 1);
   const normalPart = description.substring(colonIndex + 1);
 
@@ -39,43 +31,57 @@ const renderDescription = (description: string) => {
   );
 };
 
-const NewsSinglePage: React.FC<NewsPageProps> = ({ params }) => {
-  // Find the news item by matching the id from params
-  const news = NewsData.find((item) => String(item.id) === params.newsId);
+// Shuffle function for random resources
+// (Import and interfaces remain unchanged)
 
-  if (!news) {
-    return notFound();
-  }
+interface NewsItem {
+  id: string | number;
+  title: string;
+  description1: string;
+  description2: string;
+  description3: string;
+  videoUrl: string;
+  thumbnail: StaticImageData;
+}
+
+interface NewsPageProps {
+  params: { newsId: string };
+}
+
+// Shuffle function with correct typing
+const shuffleArray = (array: NewsItem[]) => {
+  return array.sort(() => Math.random() - 0.5);
+};
+
+const NewsSinglePage: React.FC<NewsPageProps> = ({ params }) => {
+  const news = NewsData.find((item) => String(item.id) === params.newsId);
+  if (!news) return notFound();
+
+  // Filter and shuffle related resources
+  const relatedResources = shuffleArray(
+    NewsData.filter((item) => item.id !== news.id)
+  ).slice(0, 7);
 
   return (
     <div className="w-full h-full px-5 mt-[76px] mb-[236px]">
-      <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-[1236px]">
-          {/* Hero Section */}
-          <div
-            data-aos="zoom-in"
-            data-aos-delay="200"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            className="relative"
-          >
-            {/* {news.test && ( */}
+      <div className="flex justify-center items-center">
+        <div className="max-w-[1236px] w-full">
+          {/* Hero Section remains unchanged */}
+          <div className="relative">
             <Image
               src={news1}
               alt={news.title}
               className="rounded-[40px] mob:w-full mob:h-[500px] object-cover"
             />
-            {/* )} */}
-            {/* Overlay div */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-[#000]/90 to-[#000]/30 rounded-[40px]"></div>
-            <div className="absolute inset-0 flex justify-center items-center mob:px-5">
-              <div className="w-full max-w-[876px] ">
-                <button className="p-[10px] mr-[15px] bg-transparent border border-gold rounded-[12px] text-white font-poppins text-[16px]">
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#000]/90 to-[#000]/30 rounded-[40px]" />
+            <div className="absolute inset-0 flex items-center justify-center mob:px-5">
+              <div className="max-w-[876px]">
+                <button className="p-[10px] mr-[15px] border border-gold rounded-[12px] text-white">
                   Podcast
                 </button>
-                <button className="p-[10px] bg-transparent border border-gold rounded-[12px] text-white font-poppins text-[16px]">
+                <button className="p-[10px] border border-gold rounded-[12px] text-white">
                   Operations
-                </button>{" "}
+                </button>
                 <Text as="h2" className="mt-[19px] mb-[19px]">
                   {news.title}
                 </Text>
@@ -83,46 +89,20 @@ const NewsSinglePage: React.FC<NewsPageProps> = ({ params }) => {
               </div>
             </div>
           </div>
-          {/* Hero Section */}
-          <div className="mt-[103px] flex gap-[22px]">
-            <Text className="text-gold text-[18px]">MOJO News</Text>
-            <Image src={rightbtn} alt="image" />
-            <Text className="text-[18px]">{news.title}</Text>
+
+          {/* Breadcrumb remains unchanged */}
+          <div className="mt-[103px] flex gap-[22px] items-center">
+            <Text className="text-gold">MOJO News</Text>
+            <Image src={rightbtn} alt="arrow" />
+            <Text>{news.title}</Text>
           </div>
 
           {/* Podcast Section */}
-          <div className="w-full rounded-[40px] border border-gold mt-[90px] py-[45px] flex justify-center items-center h-full">
-            <div className="w-full max-w-[1038px] flex justify-between flex-wrap px-5 navsize:justify-center navsize:gap-[30px]">
-              <Image
-                src={news.thumbnail}
-                alt="image"
-                className="w-full max-w-[300px]"
-              />
-              <div className="flex gap-[24px]">
-                <Image
-                  src={playbtn}
-                  className="w-[40px] h-[40px]"
-                  alt="playbtn"
-                />
-                <div className="mb-[27px]">
-                  <Text as="h3" className="w-full max-w-[594px]">
-                    {news.title}
-                  </Text>
-                  <Text className="text-[18px] mb-[44px]">10:57</Text>
-                  <Image
-                    src={audioplayer}
-                    alt="audio player"
-                    className="w-full max-w-[589px]"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Podcast Section */}
+          <AudioPlayerComponent news={news} />
 
-          {/* Theory Section */}
-          <div className="mt-[90px] flex justify-center gap-[20px] mob:flex-col">
-            <div className="">
+          {/* Content & Related Resources */}
+          <div className="mt-[90px] flex gap-[20px] mob:flex-col">
+            <div className="mt-[90px] flex justify-center gap-[20px] mob:flex-col">
               <div>
                 <div className="mb-8">
                   {renderDescription(news.description1)}
@@ -130,44 +110,27 @@ const NewsSinglePage: React.FC<NewsPageProps> = ({ params }) => {
                 <div className="mb-8">
                   {renderDescription(news.description2)}
                 </div>
-                <div className="mb-0">
-                  {renderDescription(news.description3)}
-                </div>
+                <div>{renderDescription(news.description3)}</div>
+              </div>
+
+              <div className="w-full max-w-[332px] mob:max-w-full">
+                <Text className="text-[32px] text-gold font-semibold mb-[33px]">
+                  Related Resources
+                </Text>
+
+                {relatedResources.map((item) => (
+                  <div key={item.id}>
+                    <Link href={`/news/${item.id}`}>
+                      <Text className="mb-[15px] cursor-pointer hover:text-gold transition-colors">
+                        {item.title}
+                      </Text>
+                    </Link>
+                    <div className="w-full border-[0.5px] border-gold mb-[30px]" />
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="w-full max-w-[332px] mob:max-w-full">
-              <Text className="text-[32px] text-gold font-semibold mb-[33px]">
-                Related Resources
-              </Text>
-              <Text className="mb-[15px]">
-                The Future of Digital Advertising
-              </Text>
-              <div className="w-full border-[0.5px] border-gold mb-[30px]" />
-              <Text className="mb-[15px]">
-                The Fundamentals of Scriptwriting for Web Videos
-              </Text>
-              <div className="w-full border-[0.5px] border-gold mb-[30px]" />
-              <Text className="mb-[15px]">
-                Maximizing ROI with Effective Content Strategies
-              </Text>
-              <div className="w-full border-[0.5px] border-gold mb-[30px]" />
-              <Text className="mb-[15px]">Tech and the Environment</Text>
-              <div className="w-full border-[0.5px] border-gold mb-[30px]" />
-              <Text className="mb-[15px]">
-                Effective Content Strategies for Small Businesses
-              </Text>
-              <div className="w-full border-[0.5px] border-gold mb-[30px]" />
-              <Text className="mb-[15px]">
-                Concept Development in Videography
-              </Text>
-              <div className="w-full border-[0.5px] border-gold mb-[30px]" />
-              <Text className="mb-[15px]">
-                Creating Engaging Video Content for SEO
-              </Text>
-              <div className="w-full border-[0.5px] border-gold mb-[30px]" />
-            </div>
           </div>
-          {/* Theory Section */}
         </div>
       </div>
     </div>

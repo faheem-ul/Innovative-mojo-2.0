@@ -108,7 +108,7 @@ export default function VideoGallery() {
                   <Image
                     src={video.thumbnail}
                     alt={video.title}
-                    className="w-full h-full"
+                    className="w-full h-full rounded-b-[33px] rounded-t-[35px]"
                   />
                 </div>
               </Link>
@@ -138,7 +138,7 @@ export default function VideoGallery() {
                       <Image
                         src={currentVideos[4].thumbnail}
                         alt={currentVideos[4].title}
-                        className="w-full h-[301px]"
+                        className="w-full h-[301px] rounded-b-[33px] rounded-t-[35px]"
                       />
                     </div>
                   </Link>
@@ -165,7 +165,7 @@ export default function VideoGallery() {
                       <Image
                         src={video.thumbnail}
                         alt={video.title}
-                        className="w-full h-[301px] rounded-lg max-w-[300px] mob:max-w-full"
+                        className="w-full h-[301px] rounded-b-[33px] rounded-t-[35px] max-w-[300px] mob:max-w-full"
                       />
                     </div>
                   </Link>

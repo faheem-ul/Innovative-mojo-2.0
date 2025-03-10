@@ -19,7 +19,7 @@ const Projects = () => {
       <div className="w-full h-full flex justify-center items-center">
         <div className="w-full max-w-[1236px]">
           <div
-            className="flex justify-between w-full xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]"
+            className="flex justify-between w-full xl:flex-col xl:justify-center xl:items-center xl:gap-[20px] mob:hidden"
             data-aos="fade-down"
             data-aos-delay="200"
             data-aos-duration="1000"
@@ -40,13 +40,13 @@ const Projects = () => {
             />
           </div>
           <div
-            className="flex justify-between mt-[31px] xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]"
+            className="flex justify-between mt-[31px] xl:flex-col xl:justify-center xl:items-center xl:gap-[20px] mob:hidden"
             data-aos="fade-up"
             data-aos-delay="200"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
           >
-            <div className="flex flex-wrap w-full max-w-[604px] gap-[16px] justify-center items-center mob:w-full">
+            <div className="flex flex-wrap w-full max-w-[604px] gap-[16px] justify-center items-center mob:w-full ">
               <ReusableProject
                 image={tenesse}
                 className="w-full max-w-[294px] mob:max-w-full"
@@ -82,7 +82,7 @@ const Projects = () => {
             />
           </div>
           <div
-            className="flex justify-between relative z-[0] w-full mt-[31px] xl:flex-col xl:justify-center xl:items-center xl:gap-[20px]"
+            className="flex justify-between relative z-[0] w-full mt-[31px] xl:flex-col xl:justify-center xl:items-center xl:gap-[20px] mob:hidden"
             data-aos="fade-down"
             data-aos-delay="200"
             data-aos-duration="1000"
