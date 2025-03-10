@@ -99,3 +99,39 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* audio player css */
+.custom-audio-player {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #e5c057 !important;
+  border: none !important;
+}
+
+.custom-audio-player .rhap_progress-bar {
+  height: 3px;
+  background-color: #fff;
+}
+
+.custom-audio-player .rhap_progress-indicator {
+  background-color: #e5c057 !important;
+  width: 12px;
+  height: 12px;
+  top: -5px;
+}
+
+.custom-audio-player svg {
+  color: #e5c057 !important;
+}
+
+.custom-audio-player .rhap_volume-controls,
+.custom-audio-player .rhap_repeat-button {
+  display: none !important;
+}
+.rhap_main-controls {
+  width: 100%;
+}
+
+.custom-audio-player .rhap_time {
+  color: #fff !important;
+}
