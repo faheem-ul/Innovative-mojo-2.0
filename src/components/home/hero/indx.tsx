@@ -23,11 +23,10 @@ const HomeHero = () => {
         force3D: true,
       });
 
-      // Use a fromTo tween with a symmetric easing for smooth, equal transitions in both directions
       gsap.fromTo(
         videoRef.current,
         {
-          rotateX: 25,
+          rotateX: 20,
           scale: 1.02,
         },
         {
@@ -38,15 +37,13 @@ const HomeHero = () => {
             trigger: videoRef.current,
             start: "top 70%",
             end: "top 30%",
-            scrub: 0.2,
-            // markers: true,
+            scrub: 0,
           },
         }
       );
     }
 
     if (textRef.current) {
-      // Fade out the text on scroll and fade back in when scrolling up
       gsap.fromTo(
         textRef.current,
         { opacity: 1 },
@@ -58,11 +55,22 @@ const HomeHero = () => {
             start: "top 45%",
             end: "top 20%",
             scrub: true,
-            // markers: true,
           },
         }
       );
     }
+
+    // Handle viewport resizing to prevent unexpected behavior on zoom
+    const handleResize = () => {
+      ScrollTrigger.refresh();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
@@ -97,12 +105,11 @@ const HomeHero = () => {
       </div>
 
       <div
-        className="relative overflow-hidden mx-auto flex justify-center mb-[200px] mob:mb-[60px]"
+        className="relative w-full overflow-hidden items-center flex justify-center mb-[200px] mob:mb-[60px]"
         ref={wrapperRef}
-        style={{ width: "90vw" }}
       >
         <div
-          className="relative overflow-hidden transition-all duration-500 z-10 h-auto w-full"
+          className="relative w-full  max-w-[1240px] xl:max-w-[1100px] mx-auto transition-all duration-500 z-10 h-auto"
           ref={videoRef}
         >
           <video
@@ -111,8 +118,7 @@ const HomeHero = () => {
             loop
             muted
             playsInline
-            className="w-full object-cover mx-auto rounded-[50px]"
-            style={{ aspectRatio: "16/9" }}
+            className="w-full object-cover max-w-full rounded-[50px]"
           />
         </div>
       </div>

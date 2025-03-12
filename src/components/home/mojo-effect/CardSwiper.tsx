@@ -21,7 +21,7 @@ const SwiperComponent = () => {
   return (
     <>
       <div
-        className="w-full max-w-[750px] max-h-[750px] rounded-full"
+        className="w-full max-w-[720px] max-h-[720px] rounded-full"
         data-aos="fade-left"
         data-aos-delay="200"
         data-aos-duration="1000"
