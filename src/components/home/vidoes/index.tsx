@@ -13,12 +13,17 @@ import videoimage5 from "@/public/images/home/videoimage5.png";
 
 const HomeVideos = () => {
   gsap.registerPlugin(ScrollTrigger);
+
+  // Outer container for extra vertical scroll space.
+  const outerContainerRef = useRef<HTMLDivElement | null>(null);
+  // Main sticky container that holds the UI.
   const containerRef = useRef<HTMLDivElement | null>(null);
+
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const cloneRef = useRef<HTMLVideoElement | null>(null);
   const originalRect = useRef<DOMRect | null>(null);
 
-  // Define video paths for each image.
+  // Video paths
   const videoPath1 =
     "/videos/_Far From Home_ - Shot on the Canon EOS R5 C (1).mp4";
   const videoPath2 = "/videos/intalvideo.mp4";
@@ -27,29 +32,28 @@ const HomeVideos = () => {
   const videoPath5 = "/videos/select healing.mp4";
 
   useEffect(() => {
-    gsap.fromTo(
-      ".video-image",
-      {
-        opacity: 0,
-        scale: 0.8,
-        y: 50,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
+    if (containerRef.current) {
+      // Apply entrance animation similar to your first snippet.
+      gsap.fromTo(
+        containerRef.current,
+        { x: "80%", scale: 0.9 },
+        {
+          x: "0%",
+          scale: 1,
+          ease: "power1.inOut",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top bottom",
+            end: "top top",
+            scrub: true,
+            // duration: "1000",
+            // markers: true,
+          },
+        }
+      );
+    }
   }, []);
 
-  // Updated openLightbox to handle spacing for mobile and animate dimensions accordingly.
   const openLightbox = (
     videoSrc: string,
     e: React.MouseEvent<HTMLImageElement>
@@ -59,14 +63,11 @@ const HomeVideos = () => {
     setSelectedVideo(videoSrc);
 
     setTimeout(() => {
-      // Create a video element instead of an image element
       const clone = document.createElement("video");
       clone.src = videoSrc;
       clone.autoplay = true;
       clone.controls = true;
       clone.playsInline = true;
-      // clone.muted = true; // Uncomment if needed for autoplay on mobile
-
       clone.style.position = "fixed";
       clone.classList.add("fixed", "rounded-lg", "shadow-lg");
       clone.style.top = `${rect.top}px`;
@@ -75,57 +76,62 @@ const HomeVideos = () => {
       clone.style.height = `${rect.height}px`;
       clone.style.objectFit = "cover";
       clone.style.zIndex = "100";
-      clone.style.opacity = "0"; // Start hidden
+      clone.style.opacity = "0";
       document.body.appendChild(clone);
       cloneRef.current = clone;
 
-      // Ensure the lightbox overlay is visible
       gsap.set(".lightbox-overlay", { opacity: 0, display: "block" });
 
-      // Determine if we're in mobile view (threshold can be adjusted)
       const isMobile = window.innerWidth < 768;
       let finalWidth;
       let finalHeight;
+      const aspectRatio = rect.width / rect.height;
+
       if (isMobile) {
-        finalWidth = window.innerWidth - 40; // 20px margin on each side
-        const aspectRatio = rect.width / rect.height;
+        finalWidth = window.innerWidth - 40;
         finalHeight = finalWidth / aspectRatio;
       } else {
         finalWidth = rect.width * 1.4;
         finalHeight = rect.height * 1.4;
       }
 
-      const tl = gsap.timeline();
-      tl.to(
-        ".lightbox-overlay",
-        {
-          opacity: 1,
-          pointerEvents: "auto",
-          duration: 0.8,
-          ease: "power2.out",
-        },
-        0
-      ).to(
-        clone,
-        {
-          top: "50%",
-          left: "50%",
-          width: finalWidth,
-          height: finalHeight,
-          transform: "translate(-50%, -50%)",
-          opacity: 1,
-          duration: 1,
-          ease: "power3.out",
-        },
-        0
-      );
+      // For the first video, cap the width at 880px.
+      if (videoSrc === videoPath1) {
+        finalWidth = Math.min(finalWidth, 1280);
+        finalHeight = finalWidth / aspectRatio;
+      }
+
+      gsap
+        .timeline()
+        .to(
+          ".lightbox-overlay",
+          {
+            opacity: 1,
+            pointerEvents: "auto",
+            duration: 0.8,
+            ease: "power2.out",
+          },
+          0
+        )
+        .to(
+          clone,
+          {
+            top: "50%",
+            left: "50%",
+            width: finalWidth,
+            height: finalHeight,
+            transform: "translate(-50%, -50%)",
+            opacity: 1,
+            duration: 1,
+            ease: "power3.out",
+          },
+          0
+        );
     }, 10);
   };
 
-  // Updated closeLightbox to pause the video immediately (stopping audio) and animate width/height back.
   const closeLightbox = () => {
     if (cloneRef.current && originalRect.current) {
-      // Pause the video to stop audio immediately
       cloneRef.current.pause();
       cloneRef.current.currentTime = 0;
 
@@ -165,57 +171,63 @@ const HomeVideos = () => {
   };
 
   return (
-    <div
-      ref={containerRef}
-      className="w-full h-full mt-[122px] xl:px-5 mb-[127px] mob:mb-[66px]"
-    >
-      <div className="w-full h-full flex justify-center items-center">
-        <div className="w-full max-w-[1236px]">
-          <div className="w-full flex justify-between 2xl:justify-center gap-[22px] flex-wrap">
-            <Image
-              src={videoimage1}
-              alt=""
-              className="w-full max-w-[580px] video-image transition-transform duration-1000"
-              onClick={(e) => openLightbox(videoPath1, e)}
-            />
-            <div className="flex justify-between xl:justify-center gap-[22px] w-full max-w-[50%] xl:max-w-full">
-              <Image
-                src={videoimage2}
-                alt=""
-                className="w-full max-w-[292px] mob:max-w-[187px] video-image transition-transform duration-1000"
-                onClick={(e) => openLightbox(videoPath2, e)}
-              />
-              <Image
-                src={videoimage3}
-                alt=""
-                className="w-full max-w-[292px] mob:max-w-[187px] video-image transition-transform duration-1000"
-                onClick={(e) => openLightbox(videoPath3, e)}
-              />
-            </div>
-          </div>
+    // Outer container provides extra scroll height.
+    <div className="flex justify-center items-center w-full">
+      <div ref={outerContainerRef} className="relative w-full overflow-hidden">
+        {/* Sticky container holding the UI */}
+        <div ref={containerRef} className="sticky top-0 w-full">
+          <div className="w-full h-full mt-[122px] xl:px-5 mb-[127px] mob:mb-[66px]">
+            <div className="w-full h-full flex justify-center items-center">
+              <div className="w-full max-w-[1240px]">
+                <div className="w-full">
+                  {/* Updated max-width for the first video */}
+                  <Image
+                    src={videoimage1}
+                    alt=""
+                    className="w-full  video-image transition-transform duration-1000"
+                    onClick={(e) => openLightbox(videoPath1, e)}
+                  />
+                  <div className="flex justify-between xl:justify-center flex-wrap w-full gap-[22px] mt-[20px]">
+                    <Image
+                      src={videoimage2}
+                      alt=""
+                      className="w-full max-w-[700px] xl:max-w-full video-image transition-transform duration-1000"
+                      onClick={(e) => openLightbox(videoPath2, e)}
+                    />
+                    <Image
+                      src={videoimage3}
+                      alt=""
+                      className="w-full max-w-[505px] xl:max-w-full video-image transition-transform duration-1000"
+                      onClick={(e) => openLightbox(videoPath3, e)}
+                    />
+                  </div>
+                </div>
 
-          <div className="flex justify-between 2xl:justify-center flex-wrap gap-[28px] w-full max-w-full mt-[12px]">
-            <Image
-              src={videoimage4}
-              alt=""
-              className="w-full max-w-[580px] mob:h-full mob:max-w-full video-image transition-transform duration-1000"
-              onClick={(e) => openLightbox(videoPath4, e)}
-            />
-            <Image
-              src={videoimage5}
-              alt=""
-              className="w-full max-w-[620px] mob:h-full mob:max-w-full video-image transition-transform duration-1000"
-              onClick={(e) => openLightbox(videoPath5, e)}
-            />
+                <div className="flex justify-between flex-wrap xl:justify-center gap-[22px] w-full max-w-full mt-[20px]">
+                  <Image
+                    src={videoimage4}
+                    alt=""
+                    className="w-full max-w-[700px] xl:max-w-full mob:h-full mob:max-w-full video-image transition-transform duration-1000"
+                    onClick={(e) => openLightbox(videoPath4, e)}
+                  />
+                  <Image
+                    src={videoimage5}
+                    alt=""
+                    className="w-full max-w-[505px] mob:h-full xl:max-w-full mob:max-w-full video-image transition-transform duration-1000"
+                    onClick={(e) => openLightbox(videoPath5, e)}
+                  />
+                </div>
+              </div>
+            </div>
+            {selectedVideo && (
+              <div
+                className="lightbox-overlay fixed inset-0 top-0 left-0 w-full h-full z-50 bg-black bg-opacity-80 opacity-0"
+                onClick={closeLightbox}
+              />
+            )}
           </div>
         </div>
       </div>
-      {selectedVideo && (
-        <div
-          className="lightbox-overlay fixed inset-0 top-0 left-0 w-full h-full z-50 bg-black bg-opacity-80 opacity-0"
-          onClick={closeLightbox}
-        />
-      )}
     </div>
   );
 };
