@@ -48,7 +48,7 @@ const HomeHero = () => {
         textRef.current,
         { opacity: 1 },
         {
-          opacity: 0,
+          opacity: 0.1,
           ease: "none",
           scrollTrigger: {
             trigger: textRef.current,
