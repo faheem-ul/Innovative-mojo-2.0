@@ -1,15 +1,16 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import videoimage1 from "@/public/images/home/videoimage1.png";
-import videoimage2 from "@/public/images/home/videoimage2.png";
-import videoimage3 from "@/public/images/home/videoimage3.png";
-import videoimage4 from "@/public/images/home/videoimage4.png";
-import videoimage5 from "@/public/images/home/videoimage5.png";
+// Video paths
+const videoPath1 =
+  "/videos/_Far From Home_ - Shot on the Canon EOS R5 C (1).mp4";
+const videoPath2 = "/videos/intalvideo.mp4";
+const videoPath3 = "/videos/Tennesse state University.mp4";
+const videoPath4 = "/videos/Meet Your Director.mp4";
+const videoPath5 = "/videos/select healing.mp4";
 
 const HomeVideos = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -22,14 +23,6 @@ const HomeVideos = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const cloneRef = useRef<HTMLVideoElement | null>(null);
   const originalRect = useRef<DOMRect | null>(null);
-
-  // Video paths
-  const videoPath1 =
-    "/videos/_Far From Home_ - Shot on the Canon EOS R5 C (1).mp4";
-  const videoPath2 = "/videos/intalvideo.mp4";
-  const videoPath3 = "/videos/Tennesse state University.mp4";
-  const videoPath4 = "/videos/Meet Your Director.mp4";
-  const videoPath5 = "/videos/select healing.mp4";
 
   useEffect(() => {
     if (containerRef.current) {
@@ -46,8 +39,6 @@ const HomeVideos = () => {
             start: "top bottom",
             end: "top top",
             scrub: true,
-            // duration: "1000",
-            // markers: true,
           },
         }
       );
@@ -56,7 +47,7 @@ const HomeVideos = () => {
 
   const openLightbox = (
     videoSrc: string,
-    e: React.MouseEvent<HTMLImageElement>
+    e: React.MouseEvent<HTMLVideoElement>
   ) => {
     const rect = e.currentTarget.getBoundingClientRect();
     originalRect.current = rect;
@@ -74,7 +65,7 @@ const HomeVideos = () => {
       clone.style.left = `${rect.left}px`;
       clone.style.width = `${rect.width}px`;
       clone.style.height = `${rect.height}px`;
-      clone.style.objectFit = "cover";
+      clone.style.objectFit = "contain"; // Make sure the video fits without being cut off
       clone.style.zIndex = "100";
       clone.style.opacity = "0";
       document.body.appendChild(clone);
@@ -95,7 +86,6 @@ const HomeVideos = () => {
         finalHeight = rect.height * 1.4;
       }
 
-      // For the first video, cap the width at 880px.
       if (videoSrc === videoPath1) {
         finalWidth = Math.min(finalWidth, 1280);
         finalHeight = finalWidth / aspectRatio;
@@ -171,51 +161,79 @@ const HomeVideos = () => {
   };
 
   return (
-    // Outer container provides extra scroll height.
     <div className="flex justify-center items-center w-full">
-      <div ref={outerContainerRef} className="relative w-full overflow-hidden">
-        {/* Sticky container holding the UI */}
-        <div ref={containerRef} className="sticky top-0 w-full">
+      <div
+        ref={outerContainerRef}
+        className="relative w-full flex justify-center items-center overflow-hidden "
+      >
+        <div ref={containerRef} className="sticky top-0 w-full max-w-[1240px]">
           <div className="w-full h-full mt-[122px] xl:px-5 mb-[127px] mob:mb-[66px]">
             <div className="w-full h-full flex justify-center items-center">
-              <div className="w-full max-w-[1240px]">
+              <div className="w-full">
                 <div className="w-full">
-                  {/* Updated max-width for the first video */}
-                  <Image
-                    src={videoimage1}
-                    alt=""
-                    className="w-full  video-image transition-transform duration-1000"
+                  {/* Video 1 */}
+                  <video
+                    className="w-full rounded-[40px]"
+                    controls
+                    autoPlay
+                    muted
                     onClick={(e) => openLightbox(videoPath1, e)}
-                  />
+                  >
+                    <source src={videoPath1} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+
                   <div className="flex justify-between xl:justify-center flex-wrap w-full gap-[22px] mt-[20px]">
-                    <Image
-                      src={videoimage2}
-                      alt=""
-                      className="w-full max-w-[700px] xl:max-w-full video-image transition-transform duration-1000"
+                    {/* Video 2 */}
+                    <video
+                      className="w-full max-w-[700px] xl:max-w-full video-image transition-transform duration-1000 object-cover rounded-[40px]"
+                      controls
+                      muted
+                      autoPlay
                       onClick={(e) => openLightbox(videoPath2, e)}
-                    />
-                    <Image
-                      src={videoimage3}
-                      alt=""
-                      className="w-full max-w-[505px] xl:max-w-full video-image transition-transform duration-1000"
+                    >
+                      <source src={videoPath2} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+
+                    {/* Video 3 */}
+                    <video
+                      className="w-full max-w-[505px] h-[418px] bg-black xl:max-w-full video-image transition-transform duration-1000 rounded-[40px]"
+                      controls
+                      muted
+                      autoPlay
                       onClick={(e) => openLightbox(videoPath3, e)}
-                    />
+                    >
+                      <source src={videoPath3} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
                 </div>
 
                 <div className="flex justify-between flex-wrap xl:justify-center gap-[22px] w-full max-w-full mt-[20px]">
-                  <Image
-                    src={videoimage4}
-                    alt=""
-                    className="w-full max-w-[700px] xl:max-w-full mob:h-full mob:max-w-full video-image transition-transform duration-1000"
+                  {/* Video 4 */}
+                  <video
+                    className="w-full max-w-[700px] xl:max-w-full mob:h-full mob:max-w-full video-image transition-transform duration-1000 rounded-[40px]"
+                    controls
+                    muted
+                    autoPlay
                     onClick={(e) => openLightbox(videoPath4, e)}
-                  />
-                  <Image
-                    src={videoimage5}
-                    alt=""
-                    className="w-full max-w-[505px] mob:h-full xl:max-w-full mob:max-w-full video-image transition-transform duration-1000"
+                  >
+                    <source src={videoPath4} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+
+                  {/* Video 5 */}
+                  <video
+                    className="w-full max-w-[505px] h-[369px] bg-black mob:h-full rounded-[40px] xl:max-w-full mob:max-w-full video-image transition-transform duration-1000"
+                    controls
+                    autoPlay
+                    muted
                     onClick={(e) => openLightbox(videoPath5, e)}
-                  />
+                  >
+                    <source src={videoPath5} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             </div>
