@@ -21,7 +21,7 @@ const MojoEffect = () => {
             <Image
               src={mojoimage}
               alt="mojoimage"
-              className="w-full max-w-[385px] mob:max-w-full"
+              className="w-full max-w-[470px] mob:max-w-full"
               data-aos="fade-right"
               data-aos-delay="200"
               data-aos-duration="1000"
