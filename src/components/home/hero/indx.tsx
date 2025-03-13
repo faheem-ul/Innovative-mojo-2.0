@@ -66,7 +66,7 @@ const HomeHero = () => {
             trigger: textRef.current,
             start: "top 45%",
             end: "top 20%",
-            scrub: true,
+            scrub: 1,
           },
         }
       );
