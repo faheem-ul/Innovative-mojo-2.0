@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import Text from "@/components/ui/Text";
 import { cn } from "@/lib/utils";
 
-import selectheal from "@/public/images/mojo-minute/select-heal.webp";
-import compilation from "@/public/images/mojo-minute/compilation.webp";
-import intel from "@/public/images/mojo-minute/intel.webp";
+// import selectheal from "@/public/images/mojo-minute/select-heal.webp";
+// import compilation from "@/public/images/mojo-minute/compilation.webp";
+// import intel from "@/public/images/mojo-minute/intel.webp";
 
 import { IoMdClose } from "react-icons/io";
 
@@ -52,11 +52,20 @@ const MojoMinuteWhatPossible: React.FC<props> = ({ classname }) => {
               onClick={() => handleOpenVideo("/videos/select healing.mp4")}
               className="cursor-pointer"
             >
-              <Image
+              {/* <Image
                 src={selectheal}
                 alt="Select Heal"
                 className="w-full max-w-[396px]"
-              />
+              /> */}
+              <video
+                className="w-full max-w-[396px] h-[267px] bg-black rounded-[17px] object-contain"
+                // controls
+                muted
+                autoPlay
+              >
+                <source src="/videos/select healing.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               <Text
                 as="h3"
                 className="mt-[20px] text-[25px] text-gold text-center"
@@ -68,11 +77,20 @@ const MojoMinuteWhatPossible: React.FC<props> = ({ classname }) => {
               onClick={() => handleOpenVideo("/videos/ourteamvid.mp4")}
               className="cursor-pointer"
             >
-              <Image
+              {/* <Image
                 src={compilation}
                 alt="Compilation"
                 className="w-full max-w-[396px]"
-              />
+              /> */}
+              <video
+                className="w-full max-w-[396px] h-[267px] bg-black rounded-[17px] object-contain"
+                // controls
+                muted
+                autoPlay
+              >
+                <source src="/videos/ourteamvid.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               <Text
                 as="h3"
                 className="mt-[20px] text-[25px] text-gold text-center"
@@ -84,7 +102,16 @@ const MojoMinuteWhatPossible: React.FC<props> = ({ classname }) => {
               onClick={() => handleOpenVideo("/videos/intalvideo.mp4")}
               className="cursor-pointer"
             >
-              <Image src={intel} alt="Intel" className="w-full max-w-[396px]" />
+              {/* <Image src={intel} alt="Intel" className="w-full max-w-[396px]" /> */}
+              <video
+                className="w-full max-w-[396px] h-[267px] bg-black rounded-[17px] object-contain"
+                // controls
+                muted
+                autoPlay
+              >
+                <source src="/videos/intalvideo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               <Text
                 as="h3"
                 className="mt-[20px] text-[25px] text-gold text-center"
