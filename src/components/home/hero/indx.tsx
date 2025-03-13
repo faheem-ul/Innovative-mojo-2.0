@@ -3,12 +3,12 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
+// import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 
 import Text from "@/components/ui/Text";
 import TypeWriterText from "@/components/ui/TypeWriterText";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger);
 
 const HomeHero = () => {
   const videoRef = useRef(null);
@@ -21,10 +21,10 @@ const HomeHero = () => {
     //   smooth: 0.7,
     //   effects: true,
     // });
-     ScrollSmoother.create({
-    smooth: 0.7,
-    effects: true,
-  });
+  //    ScrollSmoother.create({
+  //   smooth: 0.7,
+  //   effects: true,
+  // });
 
  
     if (videoRef.current && wrapperRef.current) {
