@@ -36,16 +36,14 @@ const HomeVideos = () => {
             ease: "power1.inOut",
             scrollTrigger: {
               trigger: containerRef.current,
-              start: "top 80%",  // Start position remains the same
-              end: "top -30%",   // Extends the scroll range
-              scrub: 1.5,        // Keeps smooth scrolling effect
+              start: "top 80%", // Start position remains the same
+              end: "top -30%", // Extends the scroll range
+              scrub: 1.5, // Keeps smooth scrolling effect
               markers: false,
             },
           }
         );
-        
-        
-  
+
         // Apply smooth scrolling only inside this component
         const smoothScroll = gsap.to(containerRef.current, {
           y: "-10%", // Adjust smoothness effect
@@ -57,17 +55,16 @@ const HomeVideos = () => {
             scrub: 2,
           },
         });
-  
+
         return () => {
           scrollTween.kill();
           smoothScroll.kill();
         };
       }, containerRef);
-  
+
       return () => ctx.revert();
     }
   }, []);
-  
 
   const openLightbox = (
     videoSrc: string,
@@ -198,7 +195,7 @@ const HomeVideos = () => {
                   {/* Video 1 */}
                   <video
                     className="w-full rounded-[40px] sticky top-0"
-                    controls
+                    // controls
                     autoPlay
                     muted
                     onClick={(e) => openLightbox(videoPath1, e)}
@@ -211,7 +208,7 @@ const HomeVideos = () => {
                     {/* Video 2 */}
                     <video
                       className="w-full max-w-[700px] xl:max-w-full video-image transition-transform duration-1000 object-cover rounded-[40px]"
-                      controls
+                      // controls
                       muted
                       autoPlay
                       onClick={(e) => openLightbox(videoPath2, e)}
@@ -223,7 +220,7 @@ const HomeVideos = () => {
                     {/* Video 3 */}
                     <video
                       className="w-full max-w-[520px] h-[418px] bg-black xl:max-w-full video-image transition-transform duration-1000 rounded-[40px]"
-                      controls
+                      // controls
                       muted
                       autoPlay
                       onClick={(e) => openLightbox(videoPath3, e)}
@@ -238,7 +235,7 @@ const HomeVideos = () => {
                   {/* Video 4 */}
                   <video
                     className="w-full max-w-[700px] xl:max-w-full mob:h-full mob:max-w-full video-image transition-transform duration-1000 rounded-[40px]"
-                    controls
+                    // controls
                     muted
                     autoPlay
                     onClick={(e) => openLightbox(videoPath4, e)}
@@ -250,7 +247,7 @@ const HomeVideos = () => {
                   {/* Video 5 */}
                   <video
                     className="w-full max-w-[520px] h-[369px] bg-black mob:h-full rounded-[40px] xl:max-w-full mob:max-w-full video-image transition-transform duration-1000"
-                    controls
+                    // controls
                     autoPlay
                     muted
                     onClick={(e) => openLightbox(videoPath5, e)}
