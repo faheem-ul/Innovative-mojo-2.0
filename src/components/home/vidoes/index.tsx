@@ -26,24 +26,48 @@ const HomeVideos = () => {
 
   useEffect(() => {
     if (containerRef.current) {
-      // Apply entrance animation similar to your first snippet.
-      gsap.fromTo(
-        containerRef.current,
-        { x: "80%", scale: 0.9 },
-        {
-          x: "0%",
-          scale: 1,
-          ease: "power1.inOut",
+      const ctx = gsap.context(() => {
+        const scrollTween = gsap.fromTo(
+          containerRef.current,
+          { x: "80%", scale: 0.9 },
+          {
+            x: "0%",
+            scale: 1,
+            ease: "power1.inOut",
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top 80%",  // Start position remains the same
+              end: "top -30%",   // Extends the scroll range
+              scrub: 1.5,        // Keeps smooth scrolling effect
+              markers: false,
+            },
+          }
+        );
+        
+        
+  
+        // Apply smooth scrolling only inside this component
+        const smoothScroll = gsap.to(containerRef.current, {
+          y: "-10%", // Adjust smoothness effect
+          ease: "power1.out",
           scrollTrigger: {
-            trigger: containerRef.current,
+            trigger: outerContainerRef.current,
             start: "top bottom",
-            end: "top top",
-            scrub: true,
+            end: "bottom top",
+            scrub: 2,
           },
-        }
-      );
+        });
+  
+        return () => {
+          scrollTween.kill();
+          smoothScroll.kill();
+        };
+      }, containerRef);
+  
+      return () => ctx.revert();
     }
   }, []);
+  
 
   const openLightbox = (
     videoSrc: string,
@@ -161,19 +185,19 @@ const HomeVideos = () => {
   };
 
   return (
-    <div className="flex justify-center items-center w-full">
+    <div className="flex justify-center items-center w-full ">
       <div
         ref={outerContainerRef}
         className="relative w-full flex justify-center items-center overflow-hidden "
       >
-        <div ref={containerRef} className="sticky top-0 w-full max-w-[1240px]">
+        <div ref={containerRef} className="sticky top-0 w-full max-w-[1240px] ">
           <div className="w-full h-full mt-[122px] xl:px-5 mb-[127px] mob:mb-[66px]">
             <div className="w-full h-full flex justify-center items-center">
-              <div className="w-full">
-                <div className="w-full">
+              <div className="w-full space-y-[20px]">
+                <div className="w-full space-y-[20px]">
                   {/* Video 1 */}
                   <video
-                    className="w-full rounded-[40px]"
+                    className="w-full rounded-[40px] sticky top-0"
                     controls
                     autoPlay
                     muted
@@ -183,7 +207,7 @@ const HomeVideos = () => {
                     Your browser does not support the video tag.
                   </video>
 
-                  <div className="flex justify-between xl:justify-center flex-wrap w-full gap-[22px] mt-[20px]">
+                  <div className="flex xl:justify-center flex-wrap w-full gap-[20px] ">
                     {/* Video 2 */}
                     <video
                       className="w-full max-w-[700px] xl:max-w-full video-image transition-transform duration-1000 object-cover rounded-[40px]"
@@ -198,7 +222,7 @@ const HomeVideos = () => {
 
                     {/* Video 3 */}
                     <video
-                      className="w-full max-w-[505px] h-[418px] bg-black xl:max-w-full video-image transition-transform duration-1000 rounded-[40px]"
+                      className="w-full max-w-[520px] h-[418px] bg-black xl:max-w-full video-image transition-transform duration-1000 rounded-[40px]"
                       controls
                       muted
                       autoPlay
@@ -210,7 +234,7 @@ const HomeVideos = () => {
                   </div>
                 </div>
 
-                <div className="flex justify-between flex-wrap xl:justify-center gap-[22px] w-full max-w-full mt-[20px]">
+                <div className="flex flex-wrap xl:justify-center gap-[20px] w-full max-w-full">
                   {/* Video 4 */}
                   <video
                     className="w-full max-w-[700px] xl:max-w-full mob:h-full mob:max-w-full video-image transition-transform duration-1000 rounded-[40px]"
@@ -225,7 +249,7 @@ const HomeVideos = () => {
 
                   {/* Video 5 */}
                   <video
-                    className="w-full max-w-[505px] h-[369px] bg-black mob:h-full rounded-[40px] xl:max-w-full mob:max-w-full video-image transition-transform duration-1000"
+                    className="w-full max-w-[520px] h-[369px] bg-black mob:h-full rounded-[40px] xl:max-w-full mob:max-w-full video-image transition-transform duration-1000"
                     controls
                     autoPlay
                     muted
