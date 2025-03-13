@@ -58,7 +58,7 @@ const Navbar = () => {
         <div className="flex justify-center items-center w-full min-h-[134px] mob:min-h-max">
           <div className=" max-w-[1236.5px] mob:min-h-max w-full flex flex-wrap items-center justify-between mx-auto py-4">
             <div className="flex justify-between w-full pb-4 items-center">
-              <Link
+              <a
                 href="/"
                 className="flex mob:max-w-[182px] mob:justify-start space-x-3 rtl:space-x-reverse"
               >
@@ -73,7 +73,7 @@ const Navbar = () => {
                   data-aos-duration="800"
                   data-aos-easing="ease-in-out"
                 />
-              </Link>
+              </a>
               <div className="flex xl:pr-4 xl:hidden  pt-4">
                 <button
                   // onClick={toggleMenu}

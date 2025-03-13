@@ -3,20 +3,31 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 
 import Text from "@/components/ui/Text";
 import TypeWriterText from "@/components/ui/TypeWriterText";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const HomeHero = () => {
   const videoRef = useRef(null);
   const wrapperRef = useRef(null);
   const textRef = useRef(null);
-
+  const smootherRef = useRef(null);
   useEffect(() => {
+    // Initialize ScrollSmoother
+    // const smoother = ScrollSmoother.create({
+    //   smooth: 0.7,
+    //   effects: true,
+    // });
+     ScrollSmoother.create({
+    smooth: 0.7,
+    effects: true,
+  });
+
+ 
     if (videoRef.current && wrapperRef.current) {
-      // Set perspective and transform origin
       gsap.set(wrapperRef.current, { perspective: 1200 });
       gsap.set(videoRef.current, {
         transformOrigin: "center center",
@@ -35,9 +46,9 @@ const HomeHero = () => {
           ease: "power2.inOut",
           scrollTrigger: {
             trigger: videoRef.current,
-            start: "top 70%",
-            end: "top 30%",
-            scrub: 0,
+            start: "top 90%",
+            end: "top 20%",
+            scrub: 1,
           },
         }
       );
@@ -46,9 +57,10 @@ const HomeHero = () => {
     if (textRef.current) {
       gsap.fromTo(
         textRef.current,
-        { opacity: 1 },
+        { opacity: 1, y: 0 },
         {
           opacity: 0.1,
+          y: 60,
           ease: "none",
           scrollTrigger: {
             trigger: textRef.current,
@@ -60,14 +72,12 @@ const HomeHero = () => {
       );
     }
 
-    // Handle viewport resizing to prevent unexpected behavior on zoom
     const handleResize = () => {
       ScrollTrigger.refresh();
     };
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup function
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -75,6 +85,7 @@ const HomeHero = () => {
 
   return (
     <div
+    ref={smootherRef}
       className="w-full h-full mt-[76px] px-5"
       data-aos="zoom-in"
       data-aos-delay="200"
@@ -109,8 +120,9 @@ const HomeHero = () => {
         ref={wrapperRef}
       >
         <div
-          className="relative w-full  max-w-[1240px] xl:max-w-[1100px] mx-auto transition-all duration-500 z-10 h-auto"
+          className="relative w-full max-w-[1240px] xl:max-w-[1100px] mx-auto z-10 h-auto"
           ref={videoRef}
+          
         >
           <video
             src="/videos/ourteamvid.mp4"
